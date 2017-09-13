@@ -159,7 +159,7 @@
    <NODE systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow" id="16">
    <BOUNDS type="Node" left="1575" top="6480" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="4800" top="7290" width="14970" height="10830">
+   <BOUNDS type="Window" left="5055" top="5580" width="14970" height="10830">
    </BOUNDS>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -185,7 +185,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3765" top="8475" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="240" top="1755" width="9900" height="7965">
+   <BOUNDS type="Window" left="0" top="225" width="9900" height="7965">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>

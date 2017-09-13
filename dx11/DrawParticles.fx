@@ -14,6 +14,7 @@ struct particle
 {
 	float3 pos;
 	float3 vel;
+	float3 age;
 };
 StructuredBuffer<particle> ppos;
 
@@ -62,7 +63,12 @@ vs2ps VS(VS_IN input)
 	float3 p = ppos[input.iv].pos;
 	//float4 po = input.p + float4(ppos[input.iv],0);
     Out.PosWVP = float4(p,1);// mul(float4(po.xyz,1),tVP);
-    return Out;
+	
+	// nasty hack to disable bug particles in the middle
+	if(p.x == 0 && p.y == 0) Out.PosWVP.xy = float2(100,100);
+	//if(ppos[input.iv].age.x >= 1) Out.PosWVP.xy = float2(100,100);
+
+	return Out;
 }
 
 [maxvertexcount(4)]

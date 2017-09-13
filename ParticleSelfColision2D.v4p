@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="45" scrolly="6060">
-   <BOUNDS height="10830" left="4800" top="7290" type="Window" width="14970">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="45" scrolly="-360">
+   <BOUNDS height="10830" left="5055" top="5580" type="Window" width="14970">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="7185" top="9150" width="100" height="100">
@@ -269,7 +269,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.25">
    </PIN>
    </NODE>
    <LINK srcnodeid="362" srcpinname="Y Output Value" dstnodeid="293" dstpinname="Width">
@@ -473,7 +473,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1695" top="16260" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="10905" top="3870" width="13440" height="11235">
+   <BOUNDS type="Window" left="10680" top="3165" width="13440" height="11235">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -778,6 +778,10 @@
    <PIN pinname="floorThreshold" slicecount="1" values="0.86">
    </PIN>
    <PIN pinname="drainPosXYZ" slicecount="3" visible="1" values="0,0,0">
+   </PIN>
+   <PIN pinname="aging" slicecount="1" values="0.51">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="461" srcpinname="Layer" dstnodeid="297" dstpinname="Layer">

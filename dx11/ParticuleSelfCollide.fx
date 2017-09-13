@@ -23,11 +23,13 @@ StructuredBuffer<float3> resetPos;
 
 float3 drainPos;
 
+float aging;
+
 struct particle
 {
 	float3 pos;
 	float3 vel;
-	
+	float3 age;
 };
 
 RWStructuredBuffer<particle> Output : BACKBUFFER;
@@ -43,10 +45,15 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 	if (reset)
 	{
 		Output[DTid.x].pos = resetPos[DTid.x];
-		Output[DTid.x].vel = 0;
-		
+		Output[DTid.x].vel = float3(0,0,0);
+		Output[DTid.x].age = float3(DTid.x / 9000.0, 0, 0);//float3(1+frac(DTid.x / 10000.0f),0,0);
 	}
-	
+	else if(Output[DTid.x].age.x > 1) {
+		Output[DTid.x].pos = resetPos[DTid.x];
+		Output[DTid.x].vel = float3(0,0,0);
+		Output[DTid.x].age = float3(0,0,0);//float3(Output[DTid.x].age.x - 1,0,0);
+	}
+
 	else
 	{
 	
@@ -83,6 +90,16 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 		Output[DTid.x].vel *= damp;
     	Output[DTid.x].vel += fieldsAdd;
         Output[DTid.x].pos += Output[DTid.x].vel;
+
+		if(length(Output[DTid.x].pos - drainPos) < 0.03f) {
+			Output[DTid.x].age.x += aging;
+		}
+		
+		if(Output[DTid.x].age.x > 1) {
+			Output[DTid.x].pos = float3(100,100,0);
+		}
+
+		//Output[DTid.x].pos.z = 0;
 	}
 }
 
