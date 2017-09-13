@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="1080">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="3960">
    <BOUNDS type="Window" left="6825" top="3945" width="11370" height="7965">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -30,7 +30,7 @@
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="11">
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="2475" top="3420" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="2475" top="3420" width="2400" height="1800">
@@ -156,7 +156,7 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="Texture Out" dstnodeid="1" dstpinname="Texture">
    </LINK>
-   <NODE systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow" id="16">
+   <NODE systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="Hidden" id="16">
    <BOUNDS type="Node" left="1575" top="6480" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="2790" top="4875" width="14970" height="10830">
@@ -164,6 +164,10 @@
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture In 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="damp" slicecount="1" values="0.98">
    </PIN>
    </NODE>
    <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="17">
@@ -177,17 +181,15 @@
    <LINK srcnodeid="17" srcpinname="Layer" dstnodeid="16" dstpinname="Layer 2">
    </LINK>
    <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="18">
-   <BOUNDS type="Node" left="6420" top="5610" width="100" height="100">
+   <BOUNDS type="Node" left="3765" top="8475" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6420" top="5610" width="6000" height="4500">
+   <BOUNDS type="Box" left="3765" top="8475" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="9915" top="8535" width="6240" height="5085">
+   <BOUNDS type="Window" left="240" top="1755" width="9900" height="7965">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Buffers" dstnodeid="18" dstpinname="Texture In">
-   </LINK>
    <NODE systemname="Median (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Median.tfx" nodename="Median (DX11.TextureFX)" componentmode="Hidden" id="19">
    <BOUNDS type="Node" left="3090" top="5805" width="100" height="100">
    </BOUNDS>
@@ -225,5 +227,55 @@
    <LINK srcnodeid="19" srcpinname="Texture Out" dstnodeid="21" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="21" srcpinname="Texture Out" dstnodeid="20" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="22">
+   <BOUNDS type="Node" left="3780" top="7920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="2" values="0.53,0.53">
+   </PIN>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture In 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="Add">
+   </PIN>
+   <PIN pinname="Default SizeXY" slicecount="2" values="512,512">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (DX11 MRT)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 MRT)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="2385" top="6915" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2385" top="6915" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Buffer SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="Buffers" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Layer" dstnodeid="23" dstpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Buffers" dstnodeid="22" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Renderer (DX11 MRT)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 MRT)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="5205" top="7380" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5205" top="7380" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Buffer SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="Buffers" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="24" dstpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Buffers" dstnodeid="22" dstpinname="Texture In 2">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Texture Out" dstnodeid="18" dstpinname="Texture In">
    </LINK>
    </PATCH>
