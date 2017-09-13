@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
    <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="1080">
-   <BOUNDS type="Window" left="1380" top="6435" width="11370" height="7965">
+   <BOUNDS type="Window" left="6825" top="3945" width="11370" height="7965">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -66,28 +66,6 @@
    </LINK>
    <LINK srcnodeid="9" srcpinname="Layer" dstnodeid="11" dstpinname="Layers">
    </LINK>
-   <NODE systemname="Sobel (DX11.TextureFX)" filename="%VVVV%\contributions\FluidSolver\texture11\Sobel.tfx" nodename="Sobel (DX11.TextureFX)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="2895" top="5715" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Default SizeXY" slicecount="2" values="512,512">
-   </PIN>
-   <PIN pinname="Technique" slicecount="1" values="Process">
-   </PIN>
-   <PIN pinname="Use Default Size" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Mips On Last Pass" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="amplitude" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="clipDepth" slicecount="1" values="500">
-   </PIN>
-   </NODE>
    <NODE systemname="Renderer (DX11 MRT)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 MRT)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="2355" top="5145" width="100" height="100">
    </BOUNDS>
@@ -111,8 +89,6 @@
    <LINK srcnodeid="12" srcpinname="Texture Out" dstnodeid="6" dstpinname="Texture">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Layer" dstnodeid="7" dstpinname="Layer">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="Buffers" dstnodeid="8" dstpinname="Texture In">
    </LINK>
    <NODE systemname="RGB (Kinect OpenNI)" filename="%VVVV%\addonpack\lib\nodes\plugins\OpenNIKinect.dll" nodename="RGB (Kinect OpenNI)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="3870" top="2115" width="100" height="100">
@@ -183,7 +159,7 @@
    <NODE systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow" id="16">
    <BOUNDS type="Node" left="1575" top="6480" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="1020" top="1110" width="14970" height="10830">
+   <BOUNDS type="Window" left="2790" top="4875" width="14970" height="10830">
    </BOUNDS>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -198,8 +174,6 @@
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="Texture Out" dstnodeid="17" dstpinname="Texture">
-   </LINK>
    <LINK srcnodeid="17" srcpinname="Layer" dstnodeid="16" dstpinname="Layer 2">
    </LINK>
    <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="18">
@@ -214,6 +188,42 @@
    </NODE>
    <LINK srcnodeid="7" srcpinname="Buffers" dstnodeid="18" dstpinname="Texture In">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Buffers" dstnodeid="16" dstpinname="Texture In 2">
+   <NODE systemname="Median (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Median.tfx" nodename="Median (DX11.TextureFX)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="3090" top="5805" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Buffers" dstnodeid="19" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Levels (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Levels.tfx" nodename="Levels (DX11.TextureFX)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="975" top="5760" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Output White" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Input White" slicecount="1" values="|0.53470,0.53470,0.53470,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Texture Out" dstnodeid="16" dstpinname="Texture In 2">
+   </LINK>
+   <NODE systemname="Blur (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Blur.tfx" nodename="Blur (DX11.TextureFX)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="615" top="5100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.12">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Texture Out" dstnodeid="21" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Texture Out" dstnodeid="20" dstpinname="Texture In">
    </LINK>
    </PATCH>
