@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="3960">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="1800">
    <BOUNDS type="Window" left="6825" top="3945" width="11370" height="7965">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -156,7 +156,7 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="Texture Out" dstnodeid="1" dstpinname="Texture">
    </LINK>
-   <NODE systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="Hidden" id="16">
+   <NODE systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow" id="16">
    <BOUNDS type="Node" left="1575" top="6480" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="2790" top="4875" width="14970" height="10830">
@@ -209,7 +209,7 @@
    </PIN>
    <PIN pinname="Output White" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
-   <PIN pinname="Input White" slicecount="1" values="|0.53470,0.53470,0.53470,1.00000|">
+   <PIN pinname="Input White" slicecount="1" values="|0.21407,0.21407,0.21407,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="20" srcpinname="Texture Out" dstnodeid="16" dstpinname="Texture In 2">
@@ -278,4 +278,8 @@
    </LINK>
    <LINK srcnodeid="22" srcpinname="Texture Out" dstnodeid="18" dstpinname="Texture In">
    </LINK>
+   <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
+   <BOUNDS type="Node" left="5115" top="870" width="100" height="100">
+   </BOUNDS>
+   </NODE>
    </PATCH>
