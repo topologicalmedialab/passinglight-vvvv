@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="0" scrolly="6120">
-   <BOUNDS height="10830" left="2790" top="4875" type="Window" width="14970">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="45" scrolly="6060">
+   <BOUNDS height="10830" left="4800" top="7290" type="Window" width="14970">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="7185" top="9150" width="100" height="100">
@@ -773,6 +773,12 @@
    </PIN>
    <PIN pinname="reset" visible="1">
    </PIN>
+   <PIN pinname="Depth Texture" visible="1">
+   </PIN>
+   <PIN pinname="floorThreshold" slicecount="1" values="0.86">
+   </PIN>
+   <PIN pinname="drainPosXYZ" slicecount="3" visible="1" values="0,0,0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="461" srcpinname="Layer" dstnodeid="297" dstpinname="Layer">
    </LINK>
@@ -899,8 +905,6 @@
    <LINK srcnodeid="482" srcpinname="Layer" dstnodeid="523" dstpinname="Layer">
    </LINK>
    <LINK srcnodeid="523" srcpinname="Buffers" dstnodeid="521" dstpinname="Texture In">
-   </LINK>
-   <LINK srcnodeid="522" srcpinname="Output Node" dstnodeid="521" dstpinname="Texture In 2">
    </LINK>
    <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="526">
    <BOUNDS type="Node" left="435" top="14250" width="100" height="100">
@@ -1139,5 +1143,19 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="511" srcpinname="Layer" dstnodeid="546" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="522" srcpinname="Output Node" dstnodeid="461" dstpinname="Depth Texture">
+   </LINK>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="547">
+   <BOUNDS type="Node" left="12000" top="6600" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="0.59">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="0.06">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="547" srcpinname="XYZ" dstnodeid="461" dstpinname="drainPosXYZ">
    </LINK>
    </PATCH>
