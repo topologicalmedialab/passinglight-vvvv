@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="5010" top="2280" width="11370" height="7965">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="9045" scrolly="0">
+   <BOUNDS type="Window" left="6690" top="1110" width="11370" height="7965">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -34,7 +34,7 @@
    </NODE>
    <LINK srcnodeid="14" srcpinname="Context" dstnodeid="5" dstpinname="Context">
    </LINK>
-   <NODE systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow" id="16">
+   <NODE systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="Hidden" id="16">
    <BOUNDS type="Node" left="2700" top="9030" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="1680" top="3495" width="14970" height="10830">
@@ -361,7 +361,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2685" top="12420" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="23700" top="1500" width="6240" height="5085">
+   <BOUNDS type="Window" left="23100" top="3765" width="6240" height="5085">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -416,8 +416,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK srcnodeid="41" srcpinname="Texture Out" dstnodeid="39" dstpinname="Texture">
-   </LINK>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="44">
    <BOUNDS type="Node" left="1770" top="11115" width="100" height="100">
    </BOUNDS>
@@ -587,7 +585,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1" visible="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.14" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="82" srcpinname="Y Output Value" dstnodeid="67" dstpinname="Input">
@@ -840,8 +838,6 @@
    </NODE>
    <LINK srcnodeid="137" srcpinname="Output" dstnodeid="142" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="142" srcpinname="Output" dstnodeid="82" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="135" srcpinname="Output" dstnodeid="142" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Switch (Value Output)" nodename="Switch (Value Output)" componentmode="Hidden" id="144">
@@ -891,5 +887,193 @@
    <LINK srcnodeid="5" srcpinname="Texture Out" dstnodeid="146" dstpinname="Texture">
    </LINK>
    <LINK srcnodeid="146" srcpinname="Buffers" dstnodeid="22" dstpinname="Texture In 2">
+   </LINK>
+   <NODE systemname="Segment (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Segment (DX11.Geometry)" componentmode="Hidden" id="153">
+   <BOUNDS type="Node" left="9990" top="7725" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="Flat Texture" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Resolution" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Inner Radius" slicecount="1" values="0.81">
+   </PIN>
+   <PIN pinname="Phase" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Cycles" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Constant (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\Constant.fx" nodename="Constant (DX11.Effect)" componentmode="Hidden" id="152">
+   <BOUNDS type="Node" left="9825" top="9270" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="153" srcpinname="Geometry Out" dstnodeid="152" dstpinname="Geometry">
+   </LINK>
+   <NODE systemname="DynamicTexture (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DynamicTexture (DX11.Texture 2d)" componentmode="Hidden" id="151">
+   <BOUNDS type="Node" left="10935" top="8700" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Height" slicecount="1" visible="1" values="256">
+   </PIN>
+   <PIN pinname="Data" visible="1">
+   </PIN>
+   <PIN pinname="Apply" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Channel Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="151" srcpinname="Texture Out" dstnodeid="152" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="150">
+   <BOUNDS type="Node" left="11760" top="8250" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="256">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" values="0.67">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="1.39">
+   </PIN>
+   <PIN pinname="Phase" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="149">
+   <BOUNDS type="Node" left="10140" top="8100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ">
+   </PIN>
+   <PIN pinname="Rotate" slicecount="1" values="-0.125">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="ScaleY" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="149" srcpinname="Transform Out" dstnodeid="152" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="150" srcpinname="Output" dstnodeid="151" dstpinname="Data">
+   </LINK>
+   <NODE systemname="Renderer (DX11 MRT)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 MRT)" componentmode="Hidden" id="147">
+   <BOUNDS type="Node" left="9495" top="9675" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9495" top="9675" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Buffers" visible="1">
+   </PIN>
+   <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="152" srcpinname="Layer" dstnodeid="147" dstpinname="Layer">
+   </LINK>
+   <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="154">
+   <BOUNDS type="Node" left="5265" top="11535" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Texture In 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="Mul">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Texture Out" dstnodeid="154" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="154" srcpinname="Texture Out" dstnodeid="39" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="158">
+   <BOUNDS type="Node" left="12360" top="9045" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ">
+   </PIN>
+   <PIN pinname="Rotate" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1" slicecount="1" values="1.01">
+   </PIN>
+   <PIN pinname="ScaleY" visible="1" slicecount="1" values="1.25">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="0.07">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="0.06">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="158" srcpinname="Transform Out" dstnodeid="147" dstpinname="View">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="159">
+   <BOUNDS type="Node" left="11040" top="11295" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11040" top="11295" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1500" top="8700" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="HSCB (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\HSCB.tfx" nodename="HSCB (DX11.TextureFX)" componentmode="Hidden" id="178">
+   <BOUNDS type="Node" left="9315" top="10485" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Saturation" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="147" srcpinname="Buffers" dstnodeid="178" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="179">
+   <BOUNDS type="Node" left="5940" top="12510" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5940" top="12510" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="975" top="4575" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="154" srcpinname="Texture Out" dstnodeid="179" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="178" srcpinname="Texture Out" dstnodeid="154" dstpinname="Texture In 2">
+   </LINK>
+   <LINK srcnodeid="178" srcpinname="Texture Out" dstnodeid="159" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="142" srcpinname="Output" dstnodeid="82" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
