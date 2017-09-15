@@ -4,18 +4,14 @@
 //@credits:
 
 Texture2D tex0: PREVIOUS;
-Texture2D  PTex <string uiname="pressure";>;
-Texture2D  VTex <string uiname="velocity";>;
-float2 R:TARGETSIZE;
 float4 baseColor <bool color=true;string uiname="Base Color";>;
 SamplerState s0 <string uiname="Sampler";> {Filter=MIN_MAG_MIP_LINEAR;AddressU=CLAMP;AddressV=CLAMP;};
 #include "ColorSpace.fxh"
 
 float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
-	float4 c=tex0.SampleLevel(s0,x,0);
+	float c = tex0.SampleLevel(s0,x,0).r;
 
 	float d = 1.0/512.0;
-	float4 p=PTex.SampleLevel(s0,x,0);
 	float samples = 31;
 	float PI = 3.14159265;
 	float2 pNew;
@@ -24,19 +20,22 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
         pNew.x = cos(((1.0f/samples)*i*2.0f*PI))*d;
         pNew.y = sin(((1.0f/samples)*i*2.0f*PI))*d;
 	
-        n += pNew * tex0.SampleLevel(s0,x+pNew,0).r * 100;
+		float cp = tex0.SampleLevel(s0,x+pNew,0).r;
+        n += pNew * cp * cp * 100 * 1;
 	}
 	
 	float3 view = normalize(float3(x - 0.5, 1));
-	float3 light = normalize(float3(x.x - -1.0, x.y - 0.5, 0.5));
+	float3 light = normalize(float3(0.25, 0.25, 1));//normalize(float3(x.x - 0.5 - 0.25, x.y - 0.5 + 0.25, 0.5));
 	float3 halfway = normalize(view + light);
 	float spec = 0;
 	float3 normal = normalize(float3(n, 1));
 	float shininess = 4;
-	spec = pow(max(dot(normal, halfway), 0.0), shininess)*1;
+	spec = pow(max(dot(normal, halfway), 0.0), shininess)*0.5;
+	spec -= 0.5;
+	
 	float3 outc = baseColor.rgb;
 	outc += spec;
-	outc *= c.r*1;
+	outc *= (c-0.2)*1;
 	return float4(outc, 1);
 }
 

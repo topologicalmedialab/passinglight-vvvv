@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="1185" scrolly="10560">
-   <BOUNDS height="10830" left="4995" top="3015" type="Window" width="14970">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="0" scrolly="6615">
+   <BOUNDS height="10830" left="720" top="4110" type="Window" width="14970">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="7185" top="9150" width="100" height="100">
@@ -854,8 +854,6 @@
    </NODE>
    <LINK srcnodeid="290" srcpinname="Geometry Out" dstnodeid="511" dstpinname="Geometry">
    </LINK>
-   <LINK srcnodeid="453" srcpinname="Texture Out" dstnodeid="511" dstpinname="texture2d">
-   </LINK>
    <LINK srcnodeid="512" srcpinname="Y Output Value" dstnodeid="511" dstpinname="radius">
    </LINK>
    <LINK srcnodeid="297" srcpinname="Buffers" dstnodeid="511" dstpinname="ppos" linkstyle="Bezier" hiddenwhenlocked="1">
@@ -955,7 +953,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.16">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.07">
    </PIN>
    </NODE>
    <NODE systemname="RGB (Color Join)" nodename="RGB (Color Join)" componentmode="Hidden" id="529">
@@ -1207,5 +1205,7 @@
    <LINK srcnodeid="523" srcpinname="Buffers" dstnodeid="521" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="412" srcpinname="Layer Out" dstnodeid="510" dstpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="453" srcpinname="Texture Out" dstnodeid="511" dstpinname="texture2d">
    </LINK>
    </PATCH>
