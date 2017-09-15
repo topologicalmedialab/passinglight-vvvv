@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="6150" scrolly="0">
-   <BOUNDS type="Window" left="7425" top="5160" width="11370" height="7965">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="735" scrolly="3345">
+   <BOUNDS type="Window" left="5685" top="4290" width="11370" height="7965">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -1019,13 +1019,13 @@
    </PIN>
    <PIN pinname="Rotate" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="ScaleX" visible="1" slicecount="1" values="0.9">
+   <PIN pinname="ScaleX" visible="1" slicecount="1" values="0.78">
    </PIN>
-   <PIN pinname="ScaleY" visible="1" slicecount="1" values="0.8">
+   <PIN pinname="ScaleY" visible="1" slicecount="1" values="1.24">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="0.06">
+   <PIN pinname="TranslateY" slicecount="1" values="0.21">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="0.06">
+   <PIN pinname="TranslateX" slicecount="1" values="0.04">
    </PIN>
    </NODE>
    <LINK srcnodeid="158" srcpinname="Transform Out" dstnodeid="147" dstpinname="View">
@@ -1198,4 +1198,16 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="190">
+   <BOUNDS type="Node" left="390" top="3795" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="390" top="3795" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1260" top="9015" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="145" srcpinname="Buffers" dstnodeid="190" dstpinname="Texture In">
+   </LINK>
    </PATCH>
