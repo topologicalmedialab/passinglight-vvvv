@@ -57,7 +57,7 @@
    </PIN>
    <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float">
    </PIN>
-   <PIN pinname="Texture SizeXY" slicecount="2" values="512,512">
+   <PIN pinname="Texture SizeXY" slicecount="2" values="256,256">
    </PIN>
    </NODE>
    <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="0">
