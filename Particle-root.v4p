@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="3690" scrolly="-360">
-   <BOUNDS type="Window" left="6690" top="1110" width="11370" height="7965">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="6720" scrolly="0">
+   <BOUNDS type="Window" left="7830" top="2055" width="11370" height="7965">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -1007,7 +1007,7 @@
    </PIN>
    <PIN pinname="Rotate" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="ScaleX" visible="1" slicecount="1" values="1.01">
+   <PIN pinname="ScaleX" visible="1" slicecount="1" values="0.9">
    </PIN>
    <PIN pinname="ScaleY" visible="1" slicecount="1" values="1.13">
    </PIN>
