@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="2205">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="9255" scrolly="0">
    <BOUNDS type="Window" left="4800" top="885" width="17730" height="12315">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -34,7 +34,7 @@
    </NODE>
    <LINK srcnodeid="14" srcpinname="Context" dstnodeid="5" dstpinname="Context">
    </LINK>
-   <NODE systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="Hidden" id="16">
+   <NODE systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow" id="16">
    <BOUNDS type="Node" left="2700" top="9030" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="720" top="4110" width="14970" height="10830">

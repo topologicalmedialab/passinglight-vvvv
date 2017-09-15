@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="0" scrolly="6615">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="2175" scrolly="7140">
    <BOUNDS height="10830" left="720" top="4110" type="Window" width="14970">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
@@ -9,7 +9,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.05">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.08">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|radius field|">
    </PIN>
@@ -675,7 +675,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.02">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.04">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|radius draw|">
    </PIN>
@@ -921,7 +921,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.04">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.06">
    </PIN>
    </NODE>
    <NODE systemname="RGB (Color Join)" nodename="RGB (Color Join)" componentmode="Hidden" id="528">
@@ -1069,7 +1069,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="-0.01">
+   <PIN pinname="Y Input Value" slicecount="1" values="-0.02">
    </PIN>
    </NODE>
    <LINK srcnodeid="537" srcpinname="Y Output Value" dstnodeid="531" dstpinname="Red">
@@ -1085,7 +1085,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.07">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.15">
    </PIN>
    </NODE>
    <LINK srcnodeid="538" srcpinname="Y Output Value" dstnodeid="536" dstpinname="Input 1">
