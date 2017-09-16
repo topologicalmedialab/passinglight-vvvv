@@ -1,0 +1,191 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\EdgeMask.v4p" scrollx="0" scrolly="1800" systemname="EdgeMask" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\EdgeMask.v4p">
+   <BOUNDS type="Window" left="9495" top="5280" width="9000" height="6000">
+   </BOUNDS>
+   <NODE systemname="Segment (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Segment (DX11.Geometry)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="4020" top="900" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="Flat Texture" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Resolution" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Inner Radius" slicecount="1" values="0.83">
+   </PIN>
+   <PIN pinname="Phase" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Cycles" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Constant (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\Constant.fx" nodename="Constant (DX11.Effect)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="3855" top="2445" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Geometry Out" dstnodeid="9" dstpinname="Geometry">
+   </LINK>
+   <NODE systemname="DynamicTexture (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicTexture (DX11.Texture 2d)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="4965" top="1875" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Height" slicecount="1" visible="1" values="256">
+   </PIN>
+   <PIN pinname="Data" visible="1">
+   </PIN>
+   <PIN pinname="Apply" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Channel Count" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Texture Out" dstnodeid="9" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="4170" top="1275" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ">
+   </PIN>
+   <PIN pinname="Rotate" slicecount="1" values="-0.125">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="ScaleY" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Transform Out" dstnodeid="9" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="Renderer (DX11 MRT)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 MRT)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="3525" top="2850" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3525" top="2850" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Buffers" visible="1">
+   </PIN>
+   <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Texture SizeXY" visible="1" slicecount="2" values="256,256">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Layer" dstnodeid="6" dstpinname="Layer">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="6390" top="2220" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ">
+   </PIN>
+   <PIN pinname="Rotate" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1" slicecount="1" values="0.78">
+   </PIN>
+   <PIN pinname="ScaleY" visible="1" slicecount="1" values="1.24">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="0.2">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="0.04">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Transform Out" dstnodeid="6" dstpinname="View">
+   </LINK>
+   <NODE systemname="HSCB (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\HSCB.tfx" nodename="HSCB (DX11.TextureFX)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="1215" top="4080" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Saturation" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Default SizeXY" slicecount="2" values="512,512">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Buffers" dstnodeid="4" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="CircularSpread (Spreads)" nodename="CircularSpread (Spreads)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="5595" top="1020" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" slicecount="1" values="256">
+   </PIN>
+   <PIN pinname="Output X" visible="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Height" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Phase" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="5595" top="1425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output X" dstnodeid="2" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="8" dstpinname="Data">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1335" top="4620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Window" left="330" top="1425" width="6000" height="4500">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Texture Out" dstnodeid="1" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="6555" top="1455" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Bang" dstnodeid="8" dstpinname="Apply">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="11" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="840" top="5220" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="840" top="5220" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Texture Out" dstnodeid="11" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   </PATCH>
