@@ -1395,9 +1395,9 @@
    </PIN>
    <PIN pinname="Output Black" slicecount="1" values="|0.00196,0.00196,0.00196,0.00000|">
    </PIN>
-   <PIN pinname="GammaXYZW" slicecount="4" values="0.55,0.55,0.55,0.55">
+   <PIN pinname="GammaXYZW" slicecount="4" values="0.21,0.21,0.21,0.21">
    </PIN>
-   <PIN pinname="Input Black" slicecount="1" values="|0.81525,0.81525,0.81525,0.00000|">
+   <PIN pinname="Input Black" slicecount="1" values="|0.97458,0.97458,0.97458,0.00000|">
    </PIN>
    <PIN pinname="Technique" slicecount="1" values="Clip_Both">
    </PIN>
