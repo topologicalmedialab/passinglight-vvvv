@@ -86,7 +86,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 	        d_2n += pNew * d * dcoeff;
         }
 		d_1n += d_2n;
-		float3 fieldsAdd = float3(d_1n * float2(force*  1.0f,force * 1.0f),0);
+		float3 fieldsAdd = float3(d_1n * float2(force * 1.0f,force * 1.0f),0);
 		
 		// plate
 		float plateDist = length(Output[DTid.x].pos - platePos);
@@ -101,9 +101,8 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 		if(isOnFloor) {
 			float3 drainVel = drainPos - Output[DTid.x].pos;
 			drainVel /= length(drainVel);
-			drainVel *= 0.0001f;
+			drainVel *= 0.00003f;
 			fieldsAdd = drainVel;
-			//fieldsAdd += drainVel;
 			Output[DTid.x].age.x += 0.00001;
 		}
 		Output[DTid.x].vel *= damp;
