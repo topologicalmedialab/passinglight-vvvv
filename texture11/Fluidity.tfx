@@ -10,6 +10,7 @@ SamplerState s0 <string uiname="Sampler";> {Filter=MIN_MAG_MIP_LINEAR;AddressU=C
 #include "ColorSpace.fxh"
 
 float time;
+float2 lightSource;
 
 // Simplex 2D noise
 //
@@ -145,7 +146,7 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	}
 	
 	float3 view = normalize(float3(x - 0.5, 1));
-	float3 light = normalize(float3(1.5, 0.25, 1));
+	float3 light = normalize(float3(lightSource.xy, 1));
 	float3 halfway = normalize(view + light);
 	float spec = 0;
 	float3 normal = normalize(float3(n, 1));

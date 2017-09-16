@@ -22,6 +22,9 @@ SamplerState mySampler : IMMUTABLE
 StructuredBuffer<float3> resetPos;
 
 float3 drainPos;
+float3 platePos;
+float plateRadius;
+float plateAttraction;
 
 float aging;
 
@@ -84,10 +87,21 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
         }
 		d_1n += d_2n;
 		float3 fieldsAdd = float3(d_1n * float2(force*  1.0f,force * 1.0f),0);
+		
+		// plate
+		float plateDist = length(Output[DTid.x].pos - platePos);
+		if(plateDist < plateRadius) {
+			float3 plateVel = platePos - Output[DTid.x].pos;
+			plateVel /= plateDist;
+			plateVel *= 0.001 * plateAttraction;
+			fieldsAdd += plateVel;
+		}
+		
+		// drain
 		if(isOnFloor) {
 			float3 drainVel = drainPos - Output[DTid.x].pos;
 			drainVel /= length(drainVel);
-			drainVel *= 0.00001f;
+			drainVel *= 0.0001f;
 			fieldsAdd = drainVel;
 			//fieldsAdd += drainVel;
 			Output[DTid.x].age.x += 0.00001;
