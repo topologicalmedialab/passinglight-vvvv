@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="3225" scrolly="255">
    <BOUNDS type="Window" left="4800" top="885" width="17730" height="12315">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -119,6 +119,8 @@
    <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
    <BOUNDS type="Node" left="5115" top="870" width="100" height="100">
    </BOUNDS>
+   <PIN pinname="Maximum Foreground FPS" slicecount="1" values="30">
+   </PIN>
    </NODE>
    <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="25">
    <BOUNDS type="Node" left="1950" top="5265" width="100" height="100">
@@ -359,9 +361,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="39">
-   <BOUNDS type="Node" left="2655" top="15525" width="100" height="100">
+   <BOUNDS type="Node" left="3210" top="15480" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2655" top="15525" width="3000" height="3000">
+   <BOUNDS type="Box" left="3210" top="15480" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
@@ -371,9 +373,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="FullScreen" id="40">
-   <BOUNDS type="Node" left="2190" top="16410" width="100" height="100">
+   <BOUNDS type="Node" left="2745" top="16365" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2190" top="16410" width="6000" height="4500">
+   <BOUNDS type="Box" left="2745" top="16365" width="6000" height="4500">
    </BOUNDS>
    <BOUNDS type="Window" left="26640" top="2940" width="6240" height="5085">
    </BOUNDS>
@@ -433,7 +435,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="1275" top="15105" width="100" height="100">
+   <BOUNDS type="Node" left="1800" top="13995" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -735,7 +737,7 @@
    </BOUNDS>
    <PIN pinname="Output Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Switch" slicecount="1" values="2">
+   <PIN pinname="Switch" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Input" slicecount="1" visible="1" values="0.03">
    </PIN>
@@ -1447,5 +1449,19 @@
    <LINK srcnodeid="236" srcpinname="Texture Out" dstnodeid="68" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="236" srcpinname="Texture Out" dstnodeid="233" dstpinname="Texture In 2">
+   </LINK>
+   <NODE systemname="SimpleTracker" filename="%VVVV%\contributions\ParticleSelfCollide\SimpleTracker.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\SimpleTracker.v4p" componentmode="InAWindow" id="251">
+   <BOUNDS type="Node" left="2460" top="7200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS type="Window" left="8100" top="690" width="9000" height="13680">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Texture Out" dstnodeid="251" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="251" srcpinname="Output" dstnodeid="141" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
