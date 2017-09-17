@@ -131,7 +131,7 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	//c = convert(c);
 
 	float d = 1.0/512.0;
-	float samples = 31;
+	float samples = 5;
 	float PI = 3.14159265;
 	float2 pNew;
 	float2 n = {0, 0};
@@ -150,7 +150,7 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	float3 halfway = normalize(view + light);
 	float spec = 0;
 	float3 normal = normalize(float3(n, 1));
-	float shininess = 64;
+	float shininess = 32;
 	spec = pow(max(dot(normal, halfway), 0.0), shininess)*5;
 	//spec -= 0.5;
 	
