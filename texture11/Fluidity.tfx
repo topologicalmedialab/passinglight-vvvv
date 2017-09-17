@@ -128,10 +128,9 @@ float convert(float c, float cth) {
 float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	float c = tex0.SampleLevel(s0,x,0).r;
 	float cr = texRef0.SampleLevel(s0,x,0).r * 0.5;
-	//c = convert(c);
 
 	float d = 1.0/512.0;
-	float samples = 5;
+	float samples = 10;
 	float PI = 3.14159265;
 	float2 pNew;
 	float2 n = {0, 0};
@@ -139,7 +138,6 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
         pNew.x = cos(((1.0f/samples)*i*2.0f*PI))*d;
         pNew.y = sin(((1.0f/samples)*i*2.0f*PI))*d;
 	
-//		float noise = (snoise((x+pNew+0.01*x.yx) * float2(1, 0.125)*(100 + 2 * sin(time * PI * 2))) + 1);
 		float cp = tex0.SampleLevel(s0,x+pNew,0).r;
 		cp = convert(cp, cr + 0.0001);
         n += pNew * cp * 100;
@@ -152,11 +150,9 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	float3 normal = normalize(float3(n, 1));
 	float shininess = 32;
 	spec = pow(max(dot(normal, halfway), 0.0), shininess)*5;
-	//spec -= 0.5;
 	
-	float3 outc = 0;//baseColor.rgb;
+	float3 outc = 0;
 	outc += spec;
-//	outc /= cr;
 	outc *= convert(c, cr + 0.01) * 1.;
 	outc += convert(c, cr + 0.01) * 0.7;
 	//return HSV_to_RGB(float4(c, 1, 1, 1));
