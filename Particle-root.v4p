@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="45" scrolly="3870">
    <BOUNDS type="Window" left="6195" top="885" width="12480" height="12315">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -49,7 +49,7 @@
    </PIN>
    <PIN pinname="reset/start" slicecount="1" visible="1" values="0">
    </PIN>
-   <PIN pinname="sample count" slicecount="1" values="60">
+   <PIN pinname="sample count" slicecount="1" values="5">
    </PIN>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="1.83537523287087">
    </PIN>
@@ -452,8 +452,6 @@
    </LINK>
    <LINK srcnodeid="251" srcpinname="Output" dstnodeid="188" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="251" srcpinname="Output" dstnodeid="226" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="CircleLFO" filename="%VVVV%\contributions\ParticleSelfCollide\CircleLFO.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\CircleLFO.v4p" componentmode="Hidden" id="254">
    <BOUNDS type="Node" left="5100" top="12225" width="100" height="100">
    </BOUNDS>
@@ -695,6 +693,10 @@
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
+   <PIN pinname="Input" slicecount="1" values="0.99">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <NODE systemname="Renderer (DX11 MRT)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 MRT)" componentmode="FullScreen" id="40">
    <BOUNDS type="Node" left="930" top="17610" width="100" height="100">
@@ -747,18 +749,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="283" srcpinname="Texture Out" dstnodeid="286" dstpinname="Texture">
-   </LINK>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="FullScreen" id="287">
-   <BOUNDS type="Node" left="2565" top="20340" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2565" top="20340" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="25800" top="2205" width="6240" height="5085">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="286" srcpinname="Layer" dstnodeid="287" dstpinname="Layers">
    </LINK>
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="290">
    <BOUNDS type="Node" left="4020" top="3090" width="100" height="100">
@@ -861,13 +851,125 @@
    </BOUNDS>
    <BOUNDS type="Box" left="9150" top="5820" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="1470" top="5595" width="6240" height="5085">
+   <BOUNDS type="Window" left="2490" top="5565" width="6240" height="5085">
    </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="20" srcpinname="Texture Out" dstnodeid="298" dstpinname="Texture In">
-   <LINKPOINT x="8925" y="5835">
-   </LINKPOINT>
+   <NODE systemname="TweenManager" filename="%VVVV%\contributions\ParticleSelfCollide\TweenManager.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\TweenManager.v4p" componentmode="Hidden" id="299">
+   <BOUNDS type="Node" left="3495" top="6270" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="300">
+   <BOUNDS type="Node" left="3495" top="6810" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="299" srcpinname="Output" dstnodeid="300" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="301">
+   <BOUNDS type="Box" left="3450" top="7470" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3450" top="7470" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="300" srcpinname="Output" dstnodeid="301" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="FullScreen" id="302" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="3600" top="20235" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3600" top="20235" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="24525" top="3765" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Tag" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Depth Buffer Mode" pintype="Configuration" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="VSync" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Buffer Count" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Do Not Wait" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Cursor" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Disable Shortcuts" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Refresh Rate" pintype="Input" visible="-1" slicecount="1" values="60">
+   </PIN>
+   <PIN pinname="Flip Sequential" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="AA Samples per Pixel" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Layers" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Clear" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Clear Depth" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Background Color" pintype="Input" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Fullscreen" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enable Depth Buffer" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Clear Depth Value" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="View" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Projection" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Aspect Ratio" pintype="Input" visible="0" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Crop" pintype="Input" visible="-1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="ViewPort" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Window Handle" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Mouse State" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard State" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Touch Supported" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Touch Data" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Actual BackBuffer SizeXY" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Present Time" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Query" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Control" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Node Ref" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="286" srcpinname="Layer" dstnodeid="302" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="301" srcpinname="Y Output Value" dstnodeid="226" dstpinname="Input 2">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="540" scrolly="2955">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="405" scrolly="3060">
    <BOUNDS height="10830" left="960" top="630" type="Window" width="14970">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
@@ -503,7 +503,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="60">
+   <PIN pinname="Y Input Value" slicecount="1" values="5">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|sample count|">
    </PIN>
@@ -847,7 +847,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="-0.02">
+   <PIN pinname="Y Input Value" slicecount="1" values="-0.01">
    </PIN>
    </NODE>
    <LINK srcnodeid="537" srcpinname="Y Output Value" dstnodeid="531" dstpinname="Red">
@@ -985,7 +985,7 @@
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="551">
    <BOUNDS type="Node" left="12540" top="6660" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" values="0.05">
+   <PIN pinname="Input 2" slicecount="1" values="0.04">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1010,28 +1010,14 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="554">
-   <BOUNDS type="Node" left="12795" top="4395" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" values="0.1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="552" srcpinname="Y Output Value" dstnodeid="554" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="554" srcpinname="Output" dstnodeid="551" dstpinname="Input 1">
-   </LINK>
    <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="555">
    <BOUNDS type="Node" left="9135" top="5565" width="100" height="100">
    </BOUNDS>
    <PIN pinname="XYZ" visible="1">
    </PIN>
-   <PIN pinname="X" slicecount="1" values="0.04" visible="1">
+   <PIN pinname="X" slicecount="1" visible="1" values="0.04">
    </PIN>
-   <PIN pinname="Y" slicecount="1" values="0.1" visible="1">
+   <PIN pinname="Y" slicecount="1" visible="1" values="0.1">
    </PIN>
    </NODE>
    <LINK srcnodeid="555" srcpinname="XYZ" dstnodeid="461" dstpinname="platePosXYZ">
@@ -1101,5 +1087,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="565" srcpinname="Transform Out" dstnodeid="511" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="552" srcpinname="Y Output Value" dstnodeid="551" dstpinname="Input 1">
    </LINK>
    </PATCH>

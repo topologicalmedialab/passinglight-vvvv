@@ -82,7 +82,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 	    	//if(!isOnFloor && d < floorThreshold)
 	    	//	d = 0.8;
 	    	
-	    	float dcoeff = 4;
+	    	float dcoeff = 100;
 	        d_2n += pNew * d * dcoeff;
         }
 		d_1n += d_2n;
