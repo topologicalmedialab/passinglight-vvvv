@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\EdgeMask.v4p" scrollx="0" scrolly="1800" systemname="EdgeMask" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\EdgeMask.v4p">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\EdgeMask.v4p" scrollx="690" scrolly="2160" systemname="EdgeMask" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\EdgeMask.v4p">
    <BOUNDS type="Window" left="9495" top="5280" width="9000" height="6000">
    </BOUNDS>
    <NODE systemname="Segment (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Segment (DX11.Geometry)" componentmode="Hidden" id="10">
@@ -105,19 +105,19 @@
    </PIN>
    <PIN pinname="Rotate" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="ScaleX" visible="1" slicecount="1" values="0.78">
+   <PIN pinname="ScaleX" visible="1" slicecount="1" values="0.5">
    </PIN>
-   <PIN pinname="ScaleY" visible="1" slicecount="1" values="1.24">
+   <PIN pinname="ScaleY" visible="1" slicecount="1" values="0.87">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="0.2">
+   <PIN pinname="TranslateY" slicecount="1" values="0.62">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="0.04">
+   <PIN pinname="TranslateX" slicecount="1" values="0.09">
    </PIN>
    </NODE>
    <LINK srcnodeid="5" srcpinname="Transform Out" dstnodeid="6" dstpinname="View">
    </LINK>
    <NODE systemname="HSCB (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\HSCB.tfx" nodename="HSCB (DX11.TextureFX)" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="1215" top="4080" width="100" height="100">
+   <BOUNDS type="Node" left="4755" top="3645" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
@@ -167,9 +167,9 @@
    <LINK srcnodeid="0" srcpinname="Bang" dstnodeid="8" dstpinname="Apply">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="11" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="840" top="5220" width="795" height="240">
+   <BOUNDS type="Box" left="4380" top="4785" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="840" top="5220" width="0" height="0">
+   <BOUNDS type="Node" left="4380" top="4785" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|">
    </PIN>
