@@ -94,6 +94,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 			float3 plateVel = platePos - Output[DTid.x].pos;
 			plateVel /= plateDist;
 			plateVel *= 0.001 * plateAttraction;
+			plateVel.y *= 0.5;
 			fieldsAdd += plateVel;
 		}
 		
@@ -102,6 +103,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 			float3 drainVel = drainPos - Output[DTid.x].pos;
 			drainVel /= length(drainVel);
 			drainVel *= 0.00003f;
+			drainVel.y *= 0.5;
 			fieldsAdd = drainVel;
 			Output[DTid.x].age.x += 0.00001;
 		}

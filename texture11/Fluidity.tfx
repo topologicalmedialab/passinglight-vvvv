@@ -127,7 +127,7 @@ float convert(float c, float cth) {
 
 float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	float c = tex0.SampleLevel(s0,x,0).r;
-	float cr = texRef0.SampleLevel(s0,x,0).r;
+	float cr = texRef0.SampleLevel(s0,x,0).r * 0.5;
 	//c = convert(c);
 
 	float d = 1.0/512.0;
@@ -150,14 +150,15 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	float3 halfway = normalize(view + light);
 	float spec = 0;
 	float3 normal = normalize(float3(n, 1));
-	float shininess = 16;
-	spec = pow(max(dot(normal, halfway), 0.0), shininess)*3;
-//	spec -= 0.5;
+	float shininess = 64;
+	spec = pow(max(dot(normal, halfway), 0.0), shininess)*5;
+	//spec -= 0.5;
 	
-	float3 outc = baseColor.rgb;
+	float3 outc = 0;//baseColor.rgb;
 	outc += spec;
 //	outc /= cr;
 	outc *= convert(c, cr + 0.01) * 1.;
+	outc += convert(c, cr + 0.01) * 0.7;
 	//return HSV_to_RGB(float4(c, 1, 1, 1));
 	return float4(outc, 1);
 }

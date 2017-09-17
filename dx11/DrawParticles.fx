@@ -81,7 +81,7 @@ void GS(point vs2ps input[1], inout TriangleStream<vs2ps> SpriteStream)
     //
     for(int i=0; i<4; i++)
     {
-        float3 position = g_positions[i]*radius;
+        float3 position = g_positions[i]*radius*float3(9.0/16,1,1);
         position = mul( position, (float3x3)tVI ) + input[0].PosWVP.xyz;
     	float3 norm = mul(float3(0,0,-1),(float3x3)tVI );
         output.PosWVP = mul( float4(position,1.0), tVP );
