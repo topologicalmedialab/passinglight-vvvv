@@ -90,7 +90,8 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 		
 		// plate
 		float plateDist = length(Output[DTid.x].pos - platePos);
-		if(plateDist < plateRadius) {
+		if(abs(Output[DTid.x].pos.x - platePos.x) < plateRadius
+		  || abs(Output[DTid.x].pos.y - platePos.y) < plateRadius){
 			float3 plateVel = platePos - Output[DTid.x].pos;
 			plateVel /= plateDist;
 			plateVel *= 0.001 * plateAttraction;
