@@ -4,12 +4,8 @@
 //@credits:
 
 Texture2D tex0: PREVIOUS;
-float4 baseColor <bool color=true;string uiname="Base Color";>;
 SamplerState s0 <string uiname="Sampler";> {Filter=MIN_MAG_MIP_LINEAR;AddressU=CLAMP;AddressV=CLAMP;};
 #include "ColorSpace.fxh"
-
-float time;
-float2 lightSource;
 
 TextureCube texCube <string uiname = "Environment Texture";>;
 float reflectStrength <float uimin = 0.0; float uimax = 1.0; string uiname =  "Reflection";> = 0.5;
@@ -163,12 +159,7 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	}
 	
 	float3 view = normalize(float3((x - float2(0.5, 0.5)) * float2(0.5, 1), 1));
-	float3 light = normalize(float3(lightSource.xy * float2(0.5, 1), 1));
-	float3 halfway = normalize(view + light);
-	float spec = 0;
 	float3 normal = normalize(float3(n * float2(0.5, 1), 1));
-	float shininess = 32;
-	spec = pow(max(dot(normal, halfway), 0.0), shininess)*5;
     
  	// reflection
     float3 R = reflect(-view, normal);
@@ -186,7 +177,6 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	}
 
     float4 ret = lerp(transColor*refractStrength, reflColor*reflectStrength*2, fresnel);
-	ret.rgb += spec * 0.1;
 	if(c > 1) c = 1;
 	ret.rgb *= c;
 	return ret;
