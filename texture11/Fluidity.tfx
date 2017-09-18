@@ -7,6 +7,8 @@ Texture2D tex0: PREVIOUS;
 SamplerState s0 <string uiname="Sampler";> {Filter=MIN_MAG_MIP_LINEAR;AddressU=CLAMP;AddressV=CLAMP;};
 #include "ColorSpace.fxh"
 
+float time;
+
 TextureCube texCube <string uiname = "Environment Texture";>;
 float reflectStrength <float uimin = 0.0; float uimax = 1.0; string uiname =  "Reflection";> = 0.5;
 float refractStrength <float uimin = 0.0; float uimax = 1.0; string uiname =  "Refraction";> = 0.5;
@@ -155,7 +157,9 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
         pNew.y = sin(((1.0f/samples)*i*2.0f*PI))*d;
 	
 		float cp = tex0.SampleLevel(s0,x+pNew,0).r;
-        n += pNew * cp * 10;
+		float sn = (snoise((x+pNew) * 10+float2(sin(time * PI * 2),0)) + snoise((x+pNew) * 30+(sin(time * PI * 2)))) * 0.5;
+		cp += sn * 1;
+		n += pNew * cp * 10;
 	}
 	
 	float3 view = normalize(float3((x - float2(0.5, 0.5)) * float2(0.5, 1), 1));
@@ -178,6 +182,9 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 
     float4 ret = lerp(transColor*refractStrength, reflColor*reflectStrength*2, fresnel);
 	if(c > 1) c = 1;
+	float p = 0.15;
+//	float sn = (snoise(x * 10+float2(sin(time * PI * 2),0)) + snoise(x * 30+(sin(time * PI * 2)))) * 0.5;
+//	c *= (sn * p + 1 - p);
 	ret.rgb *= c;
 	return ret;
 	
