@@ -4,6 +4,7 @@
 //@credits:
 
 Texture2D tex0: PREVIOUS;
+Texture2D texDepth;
 SamplerState s0 <string uiname="Sampler";> {Filter=MIN_MAG_MIP_LINEAR;AddressU=CLAMP;AddressV=CLAMP;};
 #include "ColorSpace.fxh"
 
@@ -152,17 +153,21 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	float PI = 3.14159265;
 	float2 pNew;
 	float2 n = {0, 0};
+	float2 v = {0, 0};
 	for (int i = 0; i < samples ; i++){
         pNew.x = cos(((1.0f/samples)*i*2.0f*PI))*d;
         pNew.y = sin(((1.0f/samples)*i*2.0f*PI))*d;
 	
 		float cp = tex0.SampleLevel(s0,x+pNew,0).r;
 		float sn = (snoise((x+pNew) * 10+float2(sin(time * PI * 2),0)) + snoise((x+pNew) * 30+(sin(time * PI * 2)))) * 0.5;
-		cp += sn * 1;
+		//cp += sn * 1;
 		n += pNew * cp * 10;
+
+		float dp = texDepth.SampleLevel(s0,x+pNew,0).r;
+		v += pNew * dp;
 	}
 	
-	float3 view = normalize(float3((x - float2(0.5, 0.5)) * float2(0.5, 1), 1));
+	float3 view = normalize(float3((x - float2(0.5, 0.5)) * float2(0.5, 1) + v, 1));
 	float3 normal = normalize(float3(n * float2(0.5, 1), 1));
     
  	// reflection
