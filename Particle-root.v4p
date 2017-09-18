@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="7590">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="9930">
    <BOUNDS type="Window" left="6195" top="885" width="12495" height="12315">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -651,7 +651,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3990" top="20490" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="31635" top="1845" width="6240" height="5085">
+   <BOUNDS type="Window" left="24795" top="2085" width="6240" height="5085">
    </BOUNDS>
    <PIN pinname="Background Color" slicecount="1" values="|0.59824,0.59824,0.59824,1.00000|">
    </PIN>
@@ -866,24 +866,6 @@
    </LINK>
    <LINK srcnodeid="275" srcpinname="Texture Out" dstnodeid="276" dstpinname="Texture In">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="314">
-   <BOUNDS type="Box" left="2775" top="17055" width="795" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2775" top="17055" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="400,400">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="314" srcpinname="Y Output Value" dstnodeid="40" dstpinname="Texture SizeXY">
-   </LINK>
    <NODE systemname="Preview (EX9.Texture)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\Preview\Preview (EX9.Texture).v4p" nodename="Preview (EX9.Texture)" componentmode="Hidden" id="209">
    <BOUNDS type="Node" left="5670" top="1260" width="100" height="100">
    </BOUNDS>
@@ -937,11 +919,11 @@
    </PIN>
    <PIN pinname="Use Default Size" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Environment Texture" visible="1">
+   <PIN pinname="Environment Texture" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Reflection" slicecount="1" values="0.19">
+   <PIN pinname="Reflection" slicecount="1" values="0.43">
    </PIN>
-   <PIN pinname="Refraction" slicecount="1" values="1">
+   <PIN pinname="Refraction" slicecount="1" values="0.7">
    </PIN>
    <PIN pinname="Refraction indicesXYZ" visible="1" slicecount="3" values="0.800000011920929,0.819999992847443,0.839999973773956">
    </PIN>
@@ -952,8 +934,10 @@
    </LINK>
    <LINK srcnodeid="254" srcpinname="Output" dstnodeid="187" dstpinname="lightSourceXY">
    </LINK>
+   <LINK srcnodeid="311" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Texture SizeXY">
+   </LINK>
    <LINK srcnodeid="317" srcpinname="Texture Out" dstnodeid="187" dstpinname="Environment Texture">
    </LINK>
-   <LINK srcnodeid="311" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Texture SizeXY">
+   <LINK srcnodeid="313" srcpinname="Y Output Value" dstnodeid="40" dstpinname="Texture SizeXY">
    </LINK>
    </PATCH>
