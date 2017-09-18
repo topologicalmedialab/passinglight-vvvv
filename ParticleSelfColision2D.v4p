@@ -9,7 +9,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.02">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.03">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|radius field|">
    </PIN>
@@ -699,7 +699,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.1">
+   <PIN pinname="Y Input Value" slicecount="1" values="-0.8">
    </PIN>
    </NODE>
    <NODE systemname="RGB (Color Join)" nodename="RGB (Color Join)" componentmode="Hidden" id="528">
@@ -956,6 +956,6 @@
    <PIN pinname="Reload" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="561" srcpinname="Texture Out" dstnodeid="511" dstpinname="texture2d">
+   <LINK srcnodeid="453" srcpinname="Texture Out" dstnodeid="511" dstpinname="texture2d">
    </LINK>
    </PATCH>
