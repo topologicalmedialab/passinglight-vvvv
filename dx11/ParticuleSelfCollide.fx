@@ -107,6 +107,15 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 			drainVel.y *= 0.5;
 			fieldsAdd = drainVel;
 			Output[DTid.x].age.x += 0.00001;
+			
+			float3 plateVel = platePos - Output[DTid.x].pos;
+			float pv = length(plateVel);
+			if(pv < 0.4) {
+				plateVel /= pv;
+				plateVel *= -0.00003f;
+				plateVel.y *= 0.5;
+				fieldsAdd += plateVel;
+			}
 		}
 		Output[DTid.x].vel *= damp;
     	Output[DTid.x].vel += fieldsAdd;
