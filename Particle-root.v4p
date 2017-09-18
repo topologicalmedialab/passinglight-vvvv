@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="8175">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="7590">
    <BOUNDS type="Window" left="6195" top="885" width="12495" height="12315">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -37,7 +37,7 @@
    <NODE systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow" id="16">
    <BOUNDS type="Node" left="4305" top="9615" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="960" top="630" width="15030" height="10830">
+   <BOUNDS type="Window" left="1275" top="555" width="15030" height="10830">
    </BOUNDS>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -303,22 +303,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="13" srcpinname="Texture Out" dstnodeid="145" dstpinname="Texture">
-   </LINK>
-   <NODE systemname="Max (DX11.TextureFX)" filename="%VVVV%\contributions\ParticleSelfCollide\texture11\Max.tfx" nodename="Max (DX11.TextureFX)" componentmode="Hidden" id="211">
-   <BOUNDS type="Node" left="5670" top="10950" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Radius" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Default SizeXY" slicecount="2" values="256,256">
-   </PIN>
-   <PIN pinname="Use Default Size" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="23" srcpinname="Buffers" dstnodeid="211" dstpinname="Texture In">
    </LINK>
    <NODE id="18" componentmode="Hidden" systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)">
    <BOUNDS type="Node" left="6780" top="20265" width="100" height="100">
@@ -617,20 +601,6 @@
    <LINK srcnodeid="300" srcpinname="Output" dstnodeid="301" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="301" srcpinname="Y Output Value" dstnodeid="226" dstpinname="Input 2">
-   </LINK>
-   <NODE systemname="Blur (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Blur.tfx" nodename="Blur (DX11.TextureFX)" componentmode="Hidden" id="305">
-   <BOUNDS type="Node" left="5670" top="11520" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Width" slicecount="1" values="0.27">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="211" srcpinname="Texture Out" dstnodeid="305" dstpinname="Texture In">
    </LINK>
    <NODE systemname="Edge (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Edge.tfx" nodename="Edge (DX11.TextureFX)" componentmode="Hidden" id="306">
    <BOUNDS type="Node" left="8520" top="11355" width="100" height="100">
@@ -981,8 +951,6 @@
    <LINK srcnodeid="23" srcpinname="Buffers" dstnodeid="187" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="254" srcpinname="Output" dstnodeid="187" dstpinname="lightSourceXY">
-   </LINK>
-   <LINK srcnodeid="305" srcpinname="Texture Out" dstnodeid="187" dstpinname="texRef0">
    </LINK>
    <LINK srcnodeid="317" srcpinname="Texture Out" dstnodeid="187" dstpinname="Environment Texture">
    </LINK>

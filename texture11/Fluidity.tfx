@@ -4,7 +4,6 @@
 //@credits:
 
 Texture2D tex0: PREVIOUS;
-Texture2D texRef0;
 float4 baseColor <bool color=true;string uiname="Base Color";>;
 SamplerState s0 <string uiname="Sampler";> {Filter=MIN_MAG_MIP_LINEAR;AddressU=CLAMP;AddressV=CLAMP;};
 #include "ColorSpace.fxh"
@@ -125,14 +124,6 @@ float snoise(float2 v){
   return 130.0 * dot(m, g);
 }
 
-float convert(float c, float cth) {
-	float PI = 3.14159265;
-	if(c > cth) {
-		c = cth;
-	}
-	c = sqrt(sin(c / cth / 2 * PI));
-	return c;
-}
 // modified refraction function that returns boolean for total internal reflection
 float3 refract2( float3 I, float3 N, float eta, out bool fail )
 {
@@ -157,11 +148,9 @@ float4 generateFresnelTex(float NdotV : POSITION) : COLOR
 
 float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	float c = tex0.SampleLevel(s0,x,0).r;
-	float cr = texRef0.SampleLevel(s0,x,0).r;
-	if(cr < 1) cr = 1;
 
 	float d = 1.0/512.0;
-	float samples = 10;
+	float samples = 5;
 	float PI = 3.14159265;
 	float2 pNew;
 	float2 n = {0, 0};
@@ -170,7 +159,6 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
         pNew.y = sin(((1.0f/samples)*i*2.0f*PI))*d;
 	
 		float cp = tex0.SampleLevel(s0,x+pNew,0).r;
-		//cp = convert(cp, cr + 0.0001);
         n += pNew * cp * 10;
 	}
 	
@@ -199,17 +187,11 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 
     float4 ret = lerp(transColor*refractStrength, reflColor*reflectStrength*2, fresnel);
 	ret.rgb += spec * 0.1;
-	float cc = convert(c, cr + 0.01);
-	ret.rgb *= cc;
+	if(c > 1) c = 1;
+	ret.rgb *= c;
 	return ret;
 	
-//	float3 outc = 0;
-//	outc += spec;
-//	float cc = convert(c, cr + 0.01);
-//	outc *= cc * 1.;
-//	outc += cc * 0.7;
-//	//return HSV_to_RGB(float4(cc, 1, 1, 1) * cc);
-//	return float4(outc, 1);
+//	//return HSV_to_RGB(float4(c, 1, 1, 1) * c);
 }
 
 technique10 Levels{
