@@ -181,10 +181,10 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	}
 
     float4 ret = lerp(transColor*refractStrength, reflColor*reflectStrength*2, fresnel);
+	c -= 1;
 	if(c > 1) c = 1;
+	if(c < 0) c = 0;
 	float p = 0.15;
-//	float sn = (snoise(x * 10+float2(sin(time * PI * 2),0)) + snoise(x * 30+(sin(time * PI * 2)))) * 0.5;
-//	c *= (sn * p + 1 - p);
 	ret.rgb *= c;
 	return ret;
 	
