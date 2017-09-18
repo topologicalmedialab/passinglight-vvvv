@@ -120,7 +120,9 @@ float snoise(float2 v){
 
 float convert(float c, float cth) {
 	float PI = 3.14159265;
-	if(c > cth) c = cth;
+	if(c > cth) {
+		c = cth;
+	}
 	c = sqrt(sin(c / cth / 2 * PI));
 	return c;
 }
@@ -155,7 +157,7 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
 	outc += spec;
 	outc *= convert(c, cr + 0.01) * 1.;
 	outc += convert(c, cr + 0.01) * 0.7;
-	//return HSV_to_RGB(float4(c, 1, 1, 1));
+	//return HSV_to_RGB(float4(c, 1, 1, 1) * c);
 	return float4(outc, 1);
 }
 

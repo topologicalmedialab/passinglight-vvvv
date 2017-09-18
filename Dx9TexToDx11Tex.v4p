@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
    <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Dx9TexToDx11Tex.v4p" scrollx="0" scrolly="-360" systemname="Dx9TexToDx11Tex" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Dx9TexToDx11Tex.v4p">
-   <BOUNDS type="Window" left="4230" top="4290" width="9000" height="6000">
+   <BOUNDS type="Window" left="690" top="9210" width="9000" height="6000">
    </BOUNDS>
    <NODE systemname="DX9ToDX11 (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\DX9ToDX11 (DX11.Texture 2d).v4p" nodename="DX9ToDX11 (DX11.Texture 2d)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="3060" top="2505" width="100" height="100">
@@ -10,42 +10,6 @@
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="2880" top="1725" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2880" top="1725" width="2400" height="1800">
-   </BOUNDS>
-   <BOUNDS type="Window" left="2160" top="7095" width="6240" height="5085">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="EX9 Out" visible="1">
-   </PIN>
-   <PIN pinname="Fullscreen" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE systemname="DX9Texture (EX9.Texture)" filename="" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="3150" top="2160" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Source" visible="1">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="4" srcpinname="EX9 Out" dstnodeid="3" dstpinname="Source">
-   </LINK>
-   <LINK srcnodeid="3" srcpinname="Texture Out" dstnodeid="5" dstpinname="Texture In">
-   </LINK>
-   <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="2970" top="1215" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="4" dstpinname="Layers">
-   </LINK>
    <NODE systemname="Renderer (DX11 MRT)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 MRT)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2760" top="3450" width="100" height="100">
    </BOUNDS>
@@ -57,7 +21,7 @@
    </PIN>
    <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float">
    </PIN>
-   <PIN pinname="Texture SizeXY" slicecount="2" values="512,512">
+   <PIN pinname="Texture SizeXY" slicecount="2" values="512,512" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="0">
@@ -81,9 +45,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
    </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="2" dstpinname="Texture">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="7" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="3600" top="4425" width="795" height="240">
    </BOUNDS>
@@ -96,4 +60,64 @@
    </LINK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8">
+   <BOUNDS type="Box" left="5685" top="2715" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5685" top="2715" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="240,180">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Texture SizeXY">
+   </LINK>
+   <NODE id="2" systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden">
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Node" left="2970" top="1215" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="4" componentmode="Hidden" systemname="Renderer (EX9)" nodename="Renderer (EX9)">
+   <BOUNDS type="Node" left="2880" top="1725" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2880" top="1725" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="2160" top="7095" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   <PIN pinname="Fullscreen" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE id="3" systemname="DX9Texture (EX9.Texture)" filename="" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden">
+   <BOUNDS type="Node" left="3150" top="2160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="EX9 Out" dstnodeid="3" dstpinname="Source">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="4" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="2" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Texture Out" dstnodeid="5" dstpinname="Texture In">
+   </LINK>
    </PATCH>
