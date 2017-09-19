@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="240" scrolly="4965">
    <BOUNDS height="10830" left="1275" top="555" type="Window" width="15030">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
@@ -589,6 +589,8 @@
    </PIN>
    <PIN pinname="platePosXYZ" slicecount="3" visible="1" values="0,0,0">
    </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="461" srcpinname="Layer" dstnodeid="297" dstpinname="Layer">
    </LINK>
@@ -934,16 +936,6 @@
    </NODE>
    <LINK srcnodeid="552" srcpinname="Y Output Value" dstnodeid="551" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="561" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="10185" top="9375" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="assets\newdotpow1over2.png">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Reload" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="562" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="9525" top="9765" width="100" height="100">
    </BOUNDS>

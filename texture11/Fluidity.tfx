@@ -5,6 +5,7 @@
 
 Texture2D tex0: PREVIOUS;
 Texture2D texRef0;
+float lightTween = 0;
 float4 baseColor <bool color=true;string uiname="Base Color";>;
 SamplerState s0 <string uiname="Sampler";> {Filter=MIN_MAG_MIP_LINEAR;AddressU=CLAMP;AddressV=CLAMP;};
 #include "ColorSpace.fxh"
@@ -146,7 +147,7 @@ float4 pLEVELS(float4 PosWVP:SV_POSITION,float2 x:TEXCOORD0):SV_Target{
         n += pNew * cp * 100;
 	}
 	
-	float3 view = normalize(float3(x - 0.5, 1));
+	float3 view = normalize(float3(x - 0.5 + float2(lightTween * 1.5, 0), 1));
 	float3 light = normalize(float3(lightSource.xy, 1));
 	float3 halfway = normalize(view + light);
 	float spec = 0;
