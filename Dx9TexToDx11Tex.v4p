@@ -17,25 +17,13 @@
    </BOUNDS>
    <PIN pinname="Buffers" visible="1">
    </PIN>
-   <PIN pinname="Layer" visible="1">
+   <PIN pinname="Layer" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float">
    </PIN>
-   <PIN pinname="Texture SizeXY" slicecount="2" values="512,512" visible="1">
+   <PIN pinname="Texture SizeXY" slicecount="2" visible="1" values="512,512">
    </PIN>
    </NODE>
-   <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="2970" top="2910" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="5" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="1" dstpinname="Layer">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="6" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="3285" top="405" width="795" height="240">
    </BOUNDS>
@@ -119,5 +107,33 @@
    <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="2" dstpinname="Texture">
    </LINK>
    <LINK srcnodeid="3" srcpinname="Texture Out" dstnodeid="5" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="2970" top="2910" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="1" dstpinname="Layer">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="10">
+   <BOUNDS type="Box" left="1455" top="1110" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1455" top="1110" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Transform">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Output Node" dstnodeid="0" dstpinname="Transform">
    </LINK>
    </PATCH>
