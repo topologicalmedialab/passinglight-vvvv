@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="0" scrolly="6300">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="0" scrolly="0">
    <BOUNDS height="10830" left="1275" top="555" type="Window" width="15030">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
@@ -309,7 +309,7 @@
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="453" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="8460" top="9210" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="assets\dot.png">
+   <PIN pinname="Filename" slicecount="1" values="assets\newdotgrey.png">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -483,7 +483,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.06">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.04">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|radius draw|">
    </PIN>
@@ -629,6 +629,8 @@
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="subtractBack" slicecount="1" values="0.5">
+   </PIN>
    </NODE>
    <LINK srcnodeid="278" srcpinname="Output" dstnodeid="462" dstpinname="radius" hiddenwhenlocked="1">
    </LINK>
@@ -699,7 +701,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="-0.8">
+   <PIN pinname="Y Input Value" slicecount="1" values="1.59">
    </PIN>
    </NODE>
    <NODE systemname="RGB (Color Join)" nodename="RGB (Color Join)" componentmode="Hidden" id="528">
@@ -758,20 +760,6 @@
    </LINK>
    <LINK srcnodeid="462" srcpinname="Layer" dstnodeid="412" dstpinname="Layer 3">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="545">
-   <BOUNDS type="Node" left="6930" top="8115" width="825" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6930" top="8115" width="825" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="repulsion">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
    <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="546">
    <BOUNDS type="Node" left="8655" top="14355" width="100" height="100">
    </BOUNDS>
@@ -956,6 +944,16 @@
    <PIN pinname="Reload" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="453" srcpinname="Texture Out" dstnodeid="511" dstpinname="texture2d">
+   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="562" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="9525" top="9765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" slicecount="1" values="assets\dot.png">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="562" srcpinname="Texture Out" dstnodeid="511" dstpinname="texture2d">
    </LINK>
    </PATCH>

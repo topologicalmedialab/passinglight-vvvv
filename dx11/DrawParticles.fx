@@ -7,6 +7,7 @@ float4x4 tV : VIEW;
 float4x4 tVP : VIEWPROJECTION;
 float4x4 tVI : VIEWINVERSE;
 Texture2D texture2d;
+float subtractBack = 0;
 
 float4 c <bool color=true;> = 1;
 
@@ -96,6 +97,7 @@ void GS(point vs2ps input[1], inout TriangleStream<vs2ps> SpriteStream)
 float4 PS_Tex(vs2ps In): SV_Target
 {
     float4 col = texture2d.Sample( g_samLinear, In.TexCd)*c;
+	col.rgb -= subtractBack;
 	//if (col.r < 0.5f) { discard; }
 	
 

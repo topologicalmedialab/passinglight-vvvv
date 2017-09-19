@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="60" scrolly="8325">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="6135">
    <BOUNDS type="Window" left="6495" top="825" width="12390" height="12315">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -643,7 +643,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3990" top="20490" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="30795" top="3255" width="6240" height="5085">
+   <BOUNDS type="Window" left="33270" top="795" width="6240" height="5085">
    </BOUNDS>
    <PIN pinname="Background Color" slicecount="1" values="|0.59824,0.59824,0.59824,1.00000|">
    </PIN>
