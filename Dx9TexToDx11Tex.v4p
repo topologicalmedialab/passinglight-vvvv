@@ -21,7 +21,7 @@
    </PIN>
    <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float">
    </PIN>
-   <PIN pinname="Texture SizeXY" slicecount="2" visible="1" values="512,512">
+   <PIN pinname="Texture SizeXY" slicecount="2" visible="1" values="240,180">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="6" systemname="IOBox (Node)">
@@ -48,26 +48,6 @@
    </LINK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8">
-   <BOUNDS type="Box" left="5685" top="2715" width="795" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5685" top="2715" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="240,180">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Texture SizeXY">
-   </LINK>
    <NODE id="2" systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden">
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
@@ -135,5 +115,25 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Output Node" dstnodeid="0" dstpinname="Transform">
+   </LINK>
+   <NODE id="8" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5685" top="2715" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5685" top="2715" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="240,180">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Texture SizeXY">
    </LINK>
    </PATCH>
