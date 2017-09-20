@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="930" scrolly="0">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="540">
    <BOUNDS type="Window" left="3240" top="1785" width="12390" height="12225">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -588,10 +588,10 @@
    <PIN pinname="Default SizeXY" slicecount="2" values="512,512">
    </PIN>
    </NODE>
-   <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="Hidden">
+   <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow">
    <BOUNDS type="Node" left="6840" top="8790" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="1545" top="750" width="15030" height="10830">
+   <BOUNDS type="Window" left="2025" top="5415" width="15030" height="10830">
    </BOUNDS>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -630,9 +630,9 @@
    </LINK>
    <LINK srcnodeid="443" srcpinname="Y Output Value" dstnodeid="425" dstpinname="reset/start">
    </LINK>
-   <LINK srcnodeid="435" srcpinname="Output" dstnodeid="425" dstpinname="Input 1">
+   <LINK srcnodeid="435" srcpinname="Output" dstnodeid="425" dstpinname="plate attraction force">
    </LINK>
-   <LINK srcnodeid="431" srcpinname="Texture Out" dstnodeid="425" dstpinname="Texture In 2">
+   <LINK srcnodeid="431" srcpinname="Texture Out" dstnodeid="425" dstpinname="depth texture">
    </LINK>
    <LINK srcnodeid="431" srcpinname="Texture Out" dstnodeid="478" dstpinname="texDepth">
    </LINK>
@@ -754,7 +754,7 @@
    </LINK>
    <LINK srcnodeid="505" srcpinname="Layer" dstnodeid="506" dstpinname="Layer 1">
    </LINK>
-   <LINK srcnodeid="425" srcpinname="Layer" dstnodeid="506" dstpinname="Layer 2">
+   <LINK srcnodeid="425" srcpinname="Output" dstnodeid="506" dstpinname="Layer 2">
    </LINK>
    <LINK srcnodeid="473" srcpinname="Texture Out" dstnodeid="472" dstpinname="Texture In">
    </LINK>

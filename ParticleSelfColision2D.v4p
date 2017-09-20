@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="240" scrolly="4965">
-   <BOUNDS height="10830" left="1275" top="555" type="Window" width="15030">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="330" scrolly="8100">
+   <BOUNDS height="10830" left="1545" top="750" type="Window" width="15030">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="7185" top="9150" width="100" height="100">
@@ -324,16 +324,6 @@
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    <PIN pinname="Flush" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden" id="492">
-   <BOUNDS type="Node" left="1695" top="16260" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1695" top="16260" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="2865" top="2670" width="13440" height="11235">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="294" srcpinname="Y Output Value" dstnodeid="303" dstpinname="Input" linkstyle="Bezier" hiddenwhenlocked="1">
@@ -691,11 +681,9 @@
    </BOUNDS>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture In 2|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|depth texture|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="510" srcpinname="Buffers" dstnodeid="492" dstpinname="Texture In">
-   </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="527">
    <BOUNDS type="Node" left="6585" top="8955" width="100" height="100">
    </BOUNDS>
@@ -769,7 +757,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
    <LINK srcnodeid="511" srcpinname="Layer" dstnodeid="546" dstpinname="Input Node">
@@ -861,7 +849,7 @@
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input 1|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|plate attraction force|">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -947,5 +935,17 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="562" srcpinname="Texture Out" dstnodeid="511" dstpinname="texture2d">
+   </LINK>
+   <NODE id="492" systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden">
+   <BOUNDS type="Node" left="1695" top="16260" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1695" top="16260" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="2865" top="2670" width="13440" height="11235">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="510" srcpinname="Buffers" dstnodeid="492" dstpinname="Texture In">
    </LINK>
    </PATCH>
