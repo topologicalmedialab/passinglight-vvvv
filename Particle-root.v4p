@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="3630" scrolly="3285">
-   <BOUNDS type="Window" left="4155" top="5610" width="12390" height="10545">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="6480">
+   <BOUNDS type="Window" left="2310" top="1410" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -927,7 +927,7 @@
    <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="540">
    <BOUNDS type="Node" left="14070" top="18090" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0.462523642431235">
+   <PIN pinname="Input" visible="1" slicecount="1" values="1.77655052614787">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1087,96 +1087,6 @@
    <LINK srcnodeid="525" srcpinname="Y Output Value" dstnodeid="425" dstpinname="platePosXYZ">
    </LINK>
    <LINK srcnodeid="447" srcpinname="spawn" dstnodeid="425" dstpinname="spawnFlag">
-   </LINK>
-   <NODE id="547" systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden">
-   <BOUNDS type="Node" left="15330" top="14235" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="548" systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden">
-   <BOUNDS type="Node" left="15330" top="13860" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="XYZ" visible="1" slicecount="3" values="0,0,0">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="528" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="16560" top="14970" width="495" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="16560" top="14970" width="495" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="plate">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
-   <NODE id="519" systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden">
-   <BOUNDS type="Node" left="15870" top="16980" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Go To Position" visible="1">
-   </PIN>
-   <PIN pinname="Position Out" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="520" systemname="HSV (Color Split)" nodename="HSV (Color Split)" componentmode="Hidden">
-   <BOUNDS type="Node" left="15510" top="16440" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Value" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="522" nodename="IOBox (Color)" componentmode="InABox" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="15510" top="15840" width="2250" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="15510" top="15840" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Color Output" visible="1">
-   </PIN>
-   <PIN pinname="Color Input" visible="1" slicecount="1" values="|0.12338,0.11438,0.12405,2.01086|">
-   </PIN>
-   </NODE>
-   <NODE id="523" systemname="Pipet (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\Pipet\Pipet (DX11.Texture 2d).v4p" nodename="Pipet (DX11.Texture 2d)" componentmode="Hidden">
-   <PIN pinname="Texture" slicecount="1" visible="1" values="||">
-   </PIN>
-   <BOUNDS type="Node" left="15480" top="15270" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="XY" slicecount="2" visible="1" values="0.5,0.5">
-   </PIN>
-   <PIN pinname="Color" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="523" dstpinname="Texture">
-   </LINK>
-   <LINK srcnodeid="547" srcpinname="XY" dstnodeid="523" dstpinname="XY">
-   </LINK>
-   <LINK srcnodeid="523" srcpinname="Color" dstnodeid="522" dstpinname="Color Input">
-   </LINK>
-   <LINK srcnodeid="522" srcpinname="Color Output" dstnodeid="520" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="520" srcpinname="Value" dstnodeid="519" dstpinname="Go To Position">
-   </LINK>
-   <LINK srcnodeid="519" srcpinname="Position Out" dstnodeid="540" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="525" srcpinname="Y Output Value" dstnodeid="548" dstpinname="XYZ">
-   <LINKPOINT x="11190" y="8520">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="548" srcpinname="Y" dstnodeid="547" dstpinname="Y">
-   </LINK>
-   <LINK srcnodeid="548" srcpinname="X" dstnodeid="547" dstpinname="X">
    </LINK>
    <NODE id="550" systemname="FrameDelay (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="FrameDelay (DX11.Texture 2d)" componentmode="Hidden">
    <BOUNDS type="Node" left="14640" top="11160" width="100" height="100">
