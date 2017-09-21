@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="6480">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="7395" scrolly="9075">
    <BOUNDS type="Window" left="2310" top="1410" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -915,7 +915,7 @@
    </PIN>
    <PIN pinname="Type Tags" visible="1" slicecount="1" values="f">
    </PIN>
-   <PIN pinname="Address" visible="1" slicecount="1" values="/passing/plate/flow">
+   <PIN pinname="Address" visible="1" slicecount="1" values="/passing/drain/flow">
    </PIN>
    <PIN pinname="OSCMessage" visible="1">
    </PIN>
@@ -1145,5 +1145,7 @@
    <LINK srcnodeid="447" srcpinname="tween" dstnodeid="554" dstpinname="Go To Position">
    </LINK>
    <LINK srcnodeid="554" srcpinname="Position Out" dstnodeid="448" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="513" srcpinname="Position Out" dstnodeid="540" dstpinname="Input">
    </LINK>
    </PATCH>
