@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="705" scrolly="720">
-   <BOUNDS type="Window" left="4020" top="2850" width="12390" height="10545">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="5505" scrolly="7830">
+   <BOUNDS type="Window" left="5625" top="2220" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -188,10 +188,10 @@
    <PIN pinname="TranslateX" slicecount="1" values="0.1">
    </PIN>
    </NODE>
-   <NODE systemname="PlateMask" filename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" componentmode="InAWindow" id="468">
+   <NODE systemname="PlateMask" filename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" componentmode="Hidden" id="468">
    <BOUNDS type="Node" left="3480" top="6600" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="5085" top="7995" width="9000" height="6000">
+   <BOUNDS type="Window" left="5415" top="8085" width="9000" height="6000">
    </BOUNDS>
    <PIN pinname="View" visible="1">
    </PIN>
@@ -818,46 +818,6 @@
    </NODE>
    <LINK srcnodeid="520" srcpinname="Value" dstnodeid="519" dstpinname="Go To Position">
    </LINK>
-   <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow">
-   <BOUNDS type="Node" left="6855" top="9555" width="3060" height="270">
-   </BOUNDS>
-   <BOUNDS type="Window" left="5715" top="4785" width="15030" height="10830">
-   </BOUNDS>
-   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Texture In 2" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="damp" slicecount="1" values="0.98">
-   </PIN>
-   <PIN pinname="reset/start" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="sample count" slicecount="1" values="5">
-   </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="1.83537523287087">
-   </PIN>
-   <PIN pinname="Buffers" visible="1">
-   </PIN>
-   <PIN pinname="drainPosXYZ" visible="1">
-   </PIN>
-   <PIN pinname="platePosXYZ" visible="1">
-   </PIN>
-   <PIN pinname="spawnFlag" slicecount="1" values="-1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="443" srcpinname="Y Output Value" dstnodeid="425" dstpinname="reset/start">
-   </LINK>
-   <LINK srcnodeid="435" srcpinname="Output" dstnodeid="425" dstpinname="plate attraction force">
-   </LINK>
-   <LINK srcnodeid="431" srcpinname="Texture Out" dstnodeid="425" dstpinname="depth texture">
-   </LINK>
-   <LINK srcnodeid="425" srcpinname="Output" dstnodeid="506" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="512" dstpinname="Texture">
-   </LINK>
-   <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="523" dstpinname="Texture">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="524">
    <BOUNDS type="Box" left="10245" top="7905" width="795" height="720">
    </BOUNDS>
@@ -876,8 +836,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="524" srcpinname="Y Output Value" dstnodeid="425" dstpinname="drainPosXYZ">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="525">
    <BOUNDS type="Box" left="11160" top="7830" width="795" height="720">
    </BOUNDS>
@@ -896,8 +854,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="525" srcpinname="Y Output Value" dstnodeid="425" dstpinname="platePosXYZ">
-   </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="526">
    <BOUNDS type="Node" left="13845" top="14880" width="100" height="100">
    </BOUNDS>
@@ -1183,9 +1139,53 @@
    </BOUNDS>
    <BOUNDS type="Window" left="1470" top="6825" width="6240" height="5085">
    </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
+   <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow">
+   <BOUNDS type="Node" left="6855" top="9555" width="3060" height="270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1860" top="6960" width="15030" height="10830">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture In 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="damp" slicecount="1" values="0.98">
+   </PIN>
+   <PIN pinname="reset/start" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="sample count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="1.83537523287087">
+   </PIN>
+   <PIN pinname="Buffers" visible="1">
+   </PIN>
+   <PIN pinname="drainPosXYZ" visible="1">
+   </PIN>
+   <PIN pinname="platePosXYZ" visible="1">
+   </PIN>
+   <PIN pinname="spawnFlag" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="443" srcpinname="Y Output Value" dstnodeid="425" dstpinname="reset/start">
+   </LINK>
+   <LINK srcnodeid="435" srcpinname="Output" dstnodeid="425" dstpinname="plate attraction force">
+   </LINK>
+   <LINK srcnodeid="431" srcpinname="Texture Out" dstnodeid="425" dstpinname="depth texture">
+   </LINK>
+   <LINK srcnodeid="425" srcpinname="Output" dstnodeid="506" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="512" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="523" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="524" srcpinname="Y Output Value" dstnodeid="425" dstpinname="drainPosXYZ">
+   </LINK>
+   <LINK srcnodeid="525" srcpinname="Y Output Value" dstnodeid="425" dstpinname="platePosXYZ">
+   </LINK>
    <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="530" dstpinname="Texture In">
    </LINK>
    </PATCH>
