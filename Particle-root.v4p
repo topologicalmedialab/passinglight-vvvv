@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="11565">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="705" scrolly="720">
    <BOUNDS type="Window" left="4020" top="2850" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -842,6 +842,8 @@
    <PIN pinname="drainPosXYZ" visible="1">
    </PIN>
    <PIN pinname="platePosXYZ" visible="1">
+   </PIN>
+   <PIN pinname="spawnFlag" slicecount="1" values="-1">
    </PIN>
    </NODE>
    <LINK srcnodeid="443" srcpinname="Y Output Value" dstnodeid="425" dstpinname="reset/start">

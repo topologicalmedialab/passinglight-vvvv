@@ -27,6 +27,7 @@ float plateRadius;
 float plateAttraction;
 
 float aging;
+int spawnFlag;
 
 struct particle
 {
@@ -52,9 +53,11 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 		Output[DTid.x].age = float3(DTid.x / 9000.0, 0, 0);//float3(1+frac(DTid.x / 10000.0f),0,0);
 	}
 	else if(Output[DTid.x].age.x > 1) {
-		Output[DTid.x].pos = resetPos[DTid.x];
-		Output[DTid.x].vel = float3(0,0,0);
-		Output[DTid.x].age = float3(0,0,0);//float3(Output[DTid.x].age.x - 1,0,0);
+		if(spawnFlag > 0) {
+			Output[DTid.x].pos = resetPos[DTid.x];
+			Output[DTid.x].vel = float3(0,0,0);
+			Output[DTid.x].age = float3(0,0,0);//float3(Output[DTid.x].age.x - 1,0,0);
+		}
 	}
 
 	else

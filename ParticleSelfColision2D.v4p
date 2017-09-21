@@ -563,6 +563,8 @@
    </PIN>
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="spawnFlag" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="461" srcpinname="Layer" dstnodeid="297" dstpinname="Layer">
    </LINK>
@@ -1001,5 +1003,23 @@
    <LINK srcnodeid="293" srcpinname="Output" dstnodeid="573" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="573" srcpinname="Output" dstnodeid="571" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="574">
+   <BOUNDS type="Box" left="15345" top="5760" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15345" top="5760" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="spawnFlag">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="574" srcpinname="Y Output Value" dstnodeid="461" dstpinname="spawnFlag">
    </LINK>
    </PATCH>
