@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="11565">
    <BOUNDS type="Window" left="4020" top="2850" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -818,7 +818,7 @@
    </NODE>
    <LINK srcnodeid="520" srcpinname="Value" dstnodeid="519" dstpinname="Go To Position">
    </LINK>
-   <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="Hidden">
+   <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow">
    <BOUNDS type="Node" left="6855" top="9555" width="3060" height="270">
    </BOUNDS>
    <BOUNDS type="Window" left="5715" top="4785" width="15030" height="10830">
@@ -936,18 +936,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden" id="530">
-   <BOUNDS type="Node" left="9795" top="11700" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="9795" top="11700" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="1470" top="6825" width="6240" height="5085">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="530" dstpinname="Texture In">
-   </LINK>
    <NODE componentmode="InABox" id="539" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="14040" top="19740" type="Node" width="0">
    </BOUNDS>
@@ -1185,5 +1173,17 @@
    <LINK srcnodeid="547" srcpinname="XY" dstnodeid="523" dstpinname="XY">
    </LINK>
    <LINK srcnodeid="519" srcpinname="Position Out" dstnodeid="540" dstpinname="Input">
+   </LINK>
+   <NODE id="530" componentmode="Hidden" systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)">
+   <BOUNDS type="Node" left="9795" top="11700" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9795" top="11700" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1470" top="6825" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="530" dstpinname="Texture In">
    </LINK>
    </PATCH>
