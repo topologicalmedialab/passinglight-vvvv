@@ -3,6 +3,7 @@
 //@tags: particule
 //@credits: dottore,vux
 int samples;
+float time;
 bool reset;
 float force;
 float damp;
@@ -46,17 +47,39 @@ RWStructuredBuffer<particle> Output : BACKBUFFER;
 void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 {
 	float PI = 3.14159265;
+	
+	int m = 8192;
+	float id = (float)DTid.x / m;
+	float timeWindow = 0.5;
+	
 	if (reset)
 	{
-		Output[DTid.x].pos = resetPos[DTid.x];
 		Output[DTid.x].vel = float3(0,0,0);
-		Output[DTid.x].age = float3(DTid.x / 9000.0, 0, 0);//float3(1+frac(DTid.x / 10000.0f),0,0);
+		if((time < id && id < time + timeWindow)
+			|| (time < id + 1 && id + 1 < time + timeWindow)) {
+			Output[DTid.x].pos = resetPos[DTid.x];
+			Output[DTid.x].age = float3(0, 0, 0);
+		}
+		else {
+			Output[DTid.x].pos = float3(100,100,0);
+			Output[DTid.x].age = float3(2, 0, 0);
+		}
 	}
 	else if(Output[DTid.x].age.x > 1) {
 		if(spawnFlag > 0) {
-			Output[DTid.x].pos = resetPos[DTid.x];
 			Output[DTid.x].vel = float3(0,0,0);
-			Output[DTid.x].age = float3(0,0,0);//float3(Output[DTid.x].age.x - 1,0,0);
+			if((time < id && id < time + timeWindow)
+				|| (time < id + 1 && id + 1 < time + timeWindow)) {
+				Output[DTid.x].pos = resetPos[DTid.x];
+				Output[DTid.x].age = float3(0, 0, 0);
+			}
+			else {
+				Output[DTid.x].pos = float3(100,100,0);
+				Output[DTid.x].age = float3(2, 0, 0);
+			}
+		}
+		else {
+			Output[DTid.x].pos = float3(100,100,0);
 		}
 	}
 

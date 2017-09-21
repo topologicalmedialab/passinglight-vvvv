@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="0" scrolly="915">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="0" scrolly="1800">
    <BOUNDS height="10830" left="810" top="4935" type="Window" width="15030">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
@@ -401,6 +401,8 @@
    </PIN>
    <PIN pinname="Output 1" visible="1">
    </PIN>
+   <PIN pinname="Initialize" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="502" srcpinname="Inverse Output" dstnodeid="504" dstpinname="Input 1">
    </LINK>
@@ -555,7 +557,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="plateRadius" slicecount="1" values="0.3">
+   <PIN pinname="plateRadius" slicecount="1" values="0.29">
    </PIN>
    <PIN pinname="plateAttraction" slicecount="1" visible="1" values="0.05">
    </PIN>
@@ -564,6 +566,8 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    <PIN pinname="spawnFlag" visible="1">
+   </PIN>
+   <PIN pinname="time" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="461" srcpinname="Layer" dstnodeid="297" dstpinname="Layer">
@@ -1026,4 +1030,12 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="576">
+   <BOUNDS type="Node" left="14715" top="6525" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="576" srcpinname="Output" dstnodeid="461" dstpinname="time">
+   </LINK>
    </PATCH>
