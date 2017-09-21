@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="6540" scrolly="5970">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="3630" scrolly="3285">
    <BOUNDS type="Window" left="4155" top="5610" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -455,6 +455,8 @@
    </PIN>
    <BOUNDS type="Window" left="3930" top="2910" width="11145" height="8790">
    </BOUNDS>
+   <PIN pinname="tween" visible="1">
+   </PIN>
    </NODE>
    <NODE id="445" systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden">
    <BOUNDS type="Node" left="10680" top="2670" width="100" height="100">
@@ -509,7 +511,7 @@
    </BOUNDS>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0.569524161680697">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -619,8 +621,6 @@
    <LINK srcnodeid="447" srcpinname="tween" dstnodeid="488" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="447" srcpinname="tween" dstnodeid="478" dstpinname="lightTween">
-   </LINK>
-   <LINK srcnodeid="447" srcpinname="tween" dstnodeid="448" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="448" srcpinname="Output" dstnodeid="449" dstpinname="Y Input Value">
    </LINK>
@@ -1221,5 +1221,19 @@
    <LINK srcnodeid="549" srcpinname="Texture Out" dstnodeid="488" dstpinname="Texture In 2">
    </LINK>
    <LINK srcnodeid="488" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="554">
+   <BOUNDS type="Node" left="8520" top="6285" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="447" srcpinname="tween" dstnodeid="554" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="554" srcpinname="Position Out" dstnodeid="448" dstpinname="Input 2">
    </LINK>
    </PATCH>
