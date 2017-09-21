@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="5505" scrolly="7830">
-   <BOUNDS type="Window" left="5625" top="2220" width="12390" height="10545">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="2790" scrolly="6840">
+   <BOUNDS type="Window" left="5415" top="4215" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -453,13 +453,17 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="spawn" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="3930" top="2910" width="11145" height="8790">
+   </BOUNDS>
    </NODE>
    <NODE id="445" systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden">
    <BOUNDS type="Node" left="10680" top="2670" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="0.57">
+   <PIN pinname="TranslateY" slicecount="1" values="0.53">
    </PIN>
    <PIN pinname="TranslateX" slicecount="1" values="0.06">
    </PIN>
@@ -614,11 +618,11 @@
    </LINK>
    <LINK srcnodeid="449" srcpinname="Y Output Value" dstnodeid="435" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="447" srcpinname="Output" dstnodeid="488" dstpinname="Input">
+   <LINK srcnodeid="447" srcpinname="tween" dstnodeid="488" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="447" srcpinname="Output" dstnodeid="478" dstpinname="lightTween">
+   <LINK srcnodeid="447" srcpinname="tween" dstnodeid="478" dstpinname="lightTween">
    </LINK>
-   <LINK srcnodeid="447" srcpinname="Output" dstnodeid="448" dstpinname="Input 2">
+   <LINK srcnodeid="447" srcpinname="tween" dstnodeid="448" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="448" srcpinname="Output" dstnodeid="449" dstpinname="Y Input Value">
    </LINK>
@@ -690,8 +694,6 @@
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="488" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
-   </LINK>
    <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="505">
    <BOUNDS type="Node" left="2415" top="8445" width="100" height="100">
    </BOUNDS>
@@ -776,48 +778,6 @@
    <PIN pinname="Position Out" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Pipet (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\Pipet\Pipet (DX11.Texture 2d).v4p" nodename="Pipet (DX11.Texture 2d)" componentmode="Hidden" id="523">
-   <BOUNDS type="Node" left="15480" top="15270" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="XY" slicecount="2" visible="1" values="0.5,0.5">
-   </PIN>
-   <PIN pinname="Color" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Color)" componentmode="InABox" id="522" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="15510" top="15840" width="2250" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="15510" top="15840" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Color Output" visible="1">
-   </PIN>
-   <PIN pinname="Color Input" visible="1" slicecount="1" values="|0.12338,0.11438,0.12405,2.01086|">
-   </PIN>
-   </NODE>
-   <NODE systemname="HSV (Color Split)" nodename="HSV (Color Split)" componentmode="Hidden" id="520">
-   <BOUNDS type="Node" left="15510" top="16440" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="522" srcpinname="Color Output" dstnodeid="520" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="523" srcpinname="Color" dstnodeid="522" dstpinname="Color Input">
-   </LINK>
-   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="519">
-   <BOUNDS type="Node" left="15870" top="16980" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Go To Position" visible="1">
-   </PIN>
-   <PIN pinname="Position Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="520" srcpinname="Value" dstnodeid="519" dstpinname="Go To Position">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="524">
    <BOUNDS type="Box" left="10245" top="7905" width="795" height="720">
    </BOUNDS>
@@ -866,20 +826,6 @@
    </NODE>
    <LINK srcnodeid="526" srcpinname="Output" dstnodeid="512" dstpinname="XY">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="528">
-   <BOUNDS type="Node" left="16560" top="14970" width="495" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="16560" top="14970" width="495" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="plate">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="529">
    <BOUNDS type="Node" left="13200" top="14925" width="525" height="270">
    </BOUNDS>
@@ -983,7 +929,7 @@
    <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="540">
    <BOUNDS type="Node" left="14070" top="18090" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0.462523642431235">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1100,38 +1046,6 @@
    </LINK>
    <LINK srcnodeid="546" srcpinname="OnChange" dstnodeid="538" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden" id="548">
-   <BOUNDS type="Node" left="15330" top="13860" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="XYZ" visible="1" slicecount="3" values="0,0,0">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="547">
-   <BOUNDS type="Node" left="15330" top="14235" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="548" srcpinname="X" dstnodeid="547" dstpinname="X">
-   </LINK>
-   <LINK srcnodeid="548" srcpinname="Y" dstnodeid="547" dstpinname="Y">
-   </LINK>
-   <LINK srcnodeid="525" srcpinname="Y Output Value" dstnodeid="548" dstpinname="XYZ">
-   <LINKPOINT x="11190" y="8520">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="547" srcpinname="XY" dstnodeid="523" dstpinname="XY">
-   </LINK>
-   <LINK srcnodeid="519" srcpinname="Position Out" dstnodeid="540" dstpinname="Input">
-   </LINK>
    <NODE id="530" componentmode="Hidden" systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)">
    <BOUNDS type="Node" left="9795" top="11700" width="100" height="100">
    </BOUNDS>
@@ -1142,10 +1056,10 @@
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow">
+   <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="Hidden">
    <BOUNDS type="Node" left="6855" top="9555" width="3060" height="270">
    </BOUNDS>
-   <BOUNDS type="Window" left="1860" top="6960" width="15030" height="10830">
+   <BOUNDS type="Window" left="1545" top="3540" width="15030" height="10830">
    </BOUNDS>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1167,7 +1081,7 @@
    </PIN>
    <PIN pinname="platePosXYZ" visible="1">
    </PIN>
-   <PIN pinname="spawnFlag" slicecount="1" values="-1">
+   <PIN pinname="spawnFlag" slicecount="1" values="0" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="443" srcpinname="Y Output Value" dstnodeid="425" dstpinname="reset/start">
@@ -1180,12 +1094,104 @@
    </LINK>
    <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="512" dstpinname="Texture">
    </LINK>
-   <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="523" dstpinname="Texture">
-   </LINK>
    <LINK srcnodeid="524" srcpinname="Y Output Value" dstnodeid="425" dstpinname="drainPosXYZ">
    </LINK>
    <LINK srcnodeid="525" srcpinname="Y Output Value" dstnodeid="425" dstpinname="platePosXYZ">
    </LINK>
    <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="530" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="447" srcpinname="spawn" dstnodeid="425" dstpinname="spawnFlag">
+   </LINK>
+   <NODE id="547" systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden">
+   <BOUNDS type="Node" left="15330" top="14235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="548" systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden">
+   <BOUNDS type="Node" left="15330" top="13860" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1" slicecount="3" values="0,0,0">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="528" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="16560" top="14970" width="495" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="16560" top="14970" width="495" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="plate">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="519" systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden">
+   <BOUNDS type="Node" left="15870" top="16980" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="520" systemname="HSV (Color Split)" nodename="HSV (Color Split)" componentmode="Hidden">
+   <BOUNDS type="Node" left="15510" top="16440" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="522" nodename="IOBox (Color)" componentmode="InABox" systemname="IOBox (Color)">
+   <BOUNDS type="Box" left="15510" top="15840" width="2250" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15510" top="15840" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Color Input" visible="1" slicecount="1" values="|0.12338,0.11438,0.12405,2.01086|">
+   </PIN>
+   </NODE>
+   <NODE id="523" systemname="Pipet (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\Pipet\Pipet (DX11.Texture 2d).v4p" nodename="Pipet (DX11.Texture 2d)" componentmode="Hidden">
+   <PIN pinname="Texture" slicecount="1" visible="1" values="||">
+   </PIN>
+   <BOUNDS type="Node" left="15480" top="15270" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" slicecount="2" visible="1" values="0.5,0.5">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="523" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="547" srcpinname="XY" dstnodeid="523" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="523" srcpinname="Color" dstnodeid="522" dstpinname="Color Input">
+   </LINK>
+   <LINK srcnodeid="522" srcpinname="Color Output" dstnodeid="520" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="520" srcpinname="Value" dstnodeid="519" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="519" srcpinname="Position Out" dstnodeid="540" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="525" srcpinname="Y Output Value" dstnodeid="548" dstpinname="XYZ">
+   <LINKPOINT x="11190" y="8520">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="548" srcpinname="Y" dstnodeid="547" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="548" srcpinname="X" dstnodeid="547" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="488" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
    </LINK>
    </PATCH>
