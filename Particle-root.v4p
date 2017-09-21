@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="3240">
-   <BOUNDS type="Window" left="3705" top="2325" width="12390" height="10545">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="6540" scrolly="5970">
+   <BOUNDS type="Window" left="4155" top="5610" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -494,7 +494,7 @@
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <NODE id="436" systemname="SimpleTracker" filename="%VVVV%\contributions\ParticleSelfCollide\SimpleTracker.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\SimpleTracker.v4p" componentmode="Hidden">
+   <NODE id="436" systemname="SimpleTracker" filename="%VVVV%\contributions\ParticleSelfCollide\SimpleTracker.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\SimpleTracker.v4p" componentmode="InAWindow">
    <BOUNDS type="Node" left="8580" top="5310" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1" slicecount="1" values="||">
@@ -1044,20 +1044,10 @@
    </LINK>
    <LINK srcnodeid="546" srcpinname="OnChange" dstnodeid="538" dstpinname="Y Input Value">
    </LINK>
-   <NODE id="530" componentmode="Hidden" systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)">
-   <BOUNDS type="Node" left="9795" top="11700" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="9795" top="11700" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="1470" top="6825" width="6240" height="5085">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
    <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="Hidden">
    <BOUNDS type="Node" left="6855" top="9555" width="3060" height="270">
    </BOUNDS>
-   <BOUNDS type="Window" left="1545" top="3540" width="15030" height="10830">
+   <BOUNDS type="Window" left="-420" top="6675" width="15030" height="10830">
    </BOUNDS>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1079,7 +1069,7 @@
    </PIN>
    <PIN pinname="platePosXYZ" visible="1">
    </PIN>
-   <PIN pinname="spawnFlag" slicecount="1" values="0" visible="1">
+   <PIN pinname="spawnFlag" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="443" srcpinname="Y Output Value" dstnodeid="425" dstpinname="reset/start">
@@ -1095,8 +1085,6 @@
    <LINK srcnodeid="524" srcpinname="Y Output Value" dstnodeid="425" dstpinname="drainPosXYZ">
    </LINK>
    <LINK srcnodeid="525" srcpinname="Y Output Value" dstnodeid="425" dstpinname="platePosXYZ">
-   </LINK>
-   <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="530" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="447" srcpinname="spawn" dstnodeid="425" dstpinname="spawnFlag">
    </LINK>
