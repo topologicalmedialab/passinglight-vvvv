@@ -50,7 +50,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 	
 	int m = 8192;
 	float id = (float)DTid.x / m;
-	float timeWindow = 0.4;
+	float timeWindow = 0.5;
 	
 	if (reset)
 	{
