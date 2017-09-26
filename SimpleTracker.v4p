@@ -2,72 +2,12 @@
    <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\SimpleTracker.v4p" systemname="SimpleTracker" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\SimpleTracker.v4p" scrollx="630" scrolly="0">
    <BOUNDS type="Window" left="3960" top="1080" width="9000" height="13680">
    </BOUNDS>
-   <NODE systemname="Pipet (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\Pipet\Pipet (DX11.Texture 2d).v4p" nodename="Pipet (DX11.Texture 2d)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="1785" top="3450" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="XY" slicecount="2" visible="1" values="0.5,0.5">
-   </PIN>
-   <PIN pinname="Color" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Color)" componentmode="InABox" id="7" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="1815" top="4020" width="2250" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1815" top="4020" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Color Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="8" srcpinname="Color" dstnodeid="7" dstpinname="Color Input">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3075" top="2640" width="795" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3075" top="2640" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="-0.26,0.55">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="8" dstpinname="XY">
-   </LINK>
-   <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="2175" top="5205" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="0.73">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="HSV (Color Split)" nodename="HSV (Color Split)" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="1815" top="4620" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="7" srcpinname="Color Output" dstnodeid="4" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="4" srcpinname="Value" dstnodeid="5" dstpinname="Input 1">
-   </LINK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="9">
-   <BOUNDS type="Box" left="4155" top="540" width="795" height="240">
+   <BOUNDS type="Box" left="2520" top="1305" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4155" top="540" width="0" height="0">
+   <BOUNDS type="Node" left="2520" top="1305" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -76,8 +16,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Output Node" dstnodeid="8" dstpinname="Texture">
-   </LINK>
    <NODE systemname="OscManager" filename="%VVVV%\contributions\ParticleSelfCollide\OscManager.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\OscManager.v4p" componentmode="Hidden" id="61">
    <BOUNDS type="Node" left="3615" top="7845" width="100" height="100">
    </BOUNDS>
@@ -184,134 +122,10 @@
    </NODE>
    <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="59" dstpinname="Input">
    </LINK>
-   <NODE systemname="Pipet (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\Pipet\Pipet (DX11.Texture 2d).v4p" nodename="Pipet (DX11.Texture 2d)" componentmode="Hidden" id="65">
-   <BOUNDS type="Node" left="4530" top="3435" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="XY" slicecount="2" visible="1" values="0.5,0.5">
-   </PIN>
-   <PIN pinname="Color" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Color)" componentmode="InABox" id="64" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="4560" top="4005" width="2250" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4560" top="4005" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Color Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="65" srcpinname="Color" dstnodeid="64" dstpinname="Color Input">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="63" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5085" top="2580" width="795" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5085" top="2580" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.08,0.02">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="63" srcpinname="Y Output Value" dstnodeid="65" dstpinname="XY">
-   </LINK>
-   <NODE systemname="HSV (Color Split)" nodename="HSV (Color Split)" componentmode="Hidden" id="62">
-   <BOUNDS type="Node" left="4560" top="4605" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="64" srcpinname="Color Output" dstnodeid="62" dstpinname="Input">
-   </LINK>
-   <NODE systemname="Pipet (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\Pipet\Pipet (DX11.Texture 2d).v4p" nodename="Pipet (DX11.Texture 2d)" componentmode="Hidden" id="69">
-   <BOUNDS type="Node" left="7245" top="3450" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="XY" slicecount="2" visible="1" values="0.5,0.5">
-   </PIN>
-   <PIN pinname="Color" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Color)" componentmode="InABox" id="68" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="7275" top="4020" width="2250" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="7275" top="4020" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Color Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="69" srcpinname="Color" dstnodeid="68" dstpinname="Color Input">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="67" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7800" top="2595" width="795" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="7800" top="2595" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.4,0.55">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="67" srcpinname="Y Output Value" dstnodeid="69" dstpinname="XY">
-   </LINK>
-   <NODE systemname="HSV (Color Split)" nodename="HSV (Color Split)" componentmode="Hidden" id="66">
-   <BOUNDS type="Node" left="7275" top="4620" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="68" srcpinname="Color Output" dstnodeid="66" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Output Node" dstnodeid="65" dstpinname="Texture">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Output Node" dstnodeid="69" dstpinname="Texture">
-   </LINK>
-   <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="72">
-   <BOUNDS type="Node" left="4935" top="5190" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="0.7">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="73">
-   <BOUNDS type="Node" left="7650" top="5145" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="0.81">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="66" srcpinname="Value" dstnodeid="73" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="62" srcpinname="Value" dstnodeid="72" dstpinname="Input 1">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="74">
-   <BOUNDS type="Node" left="1530" top="2325" width="375" height="270">
+   <BOUNDS type="Node" left="5505" top="1170" width="375" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="1530" top="2325" width="375" height="270">
+   <BOUNDS type="Box" left="5505" top="1170" width="375" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="left">
    </PIN>
@@ -323,9 +137,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="75">
-   <BOUNDS type="Node" left="4710" top="2040" width="510" height="270">
+   <BOUNDS type="Node" left="5505" top="1410" width="510" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="4710" top="2040" width="510" height="270">
+   <BOUNDS type="Box" left="5505" top="1410" width="510" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="front">
    </PIN>
@@ -337,9 +151,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="76">
-   <BOUNDS type="Node" left="7575" top="2040" width="510" height="270">
+   <BOUNDS type="Node" left="5505" top="1635" width="510" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="7575" top="2040" width="510" height="270">
+   <BOUNDS type="Box" left="5505" top="1635" width="510" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="right">
    </PIN>
@@ -356,10 +170,144 @@
    </LINK>
    <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="59" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="58" dstpinname="Y Input Value">
+   <NODE systemname="Pipet (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\Pipet\Pipet (DX11.Texture 2d).v4p" nodename="Pipet (DX11.Texture 2d)" componentmode="InAWindow" id="77">
+   <BOUNDS type="Node" left="3180" top="2310" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XY" slicecount="2" visible="1" values="0.5,0.5">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="78">
+   <BOUNDS type="Box" left="4020" top="1140" width="1395" height="735">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4020" top="1140" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="6" visible="1" values="-0.26,0.55,0.08,0.02,0.4,0.55">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="78" srcpinname="Y Output Value" dstnodeid="77" dstpinname="XY">
    </LINK>
-   <LINK srcnodeid="72" srcpinname="Output" dstnodeid="57" dstpinname="Y Input Value">
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="79" systemname="IOBox (Color)">
+   <BOUNDS type="Box" left="3180" top="2790" width="2250" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3180" top="2790" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Color Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="77" srcpinname="Color" dstnodeid="79" dstpinname="Color Input">
    </LINK>
-   <LINK srcnodeid="73" srcpinname="Output" dstnodeid="56" dstpinname="Y Input Value">
+   <LINK srcnodeid="9" srcpinname="Output Node" dstnodeid="77" dstpinname="Texture">
    </LINK>
+   <NODE systemname="HSV (Color Split)" nodename="HSV (Color Split)" componentmode="Hidden" id="82">
+   <BOUNDS type="Node" left="3180" top="3720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="79" srcpinname="Color Output" dstnodeid="82" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="84">
+   <BOUNDS type="Box" left="2130" top="4425" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2130" top="4425" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="3" values="0,,">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Value" dstnodeid="84" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="89">
+   <BOUNDS type="Node" left="3840" top="4815" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Value" dstnodeid="89" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="90">
+   <BOUNDS type="Box" left="4275" top="3645" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4275" top="3645" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.73,0.7,0.81">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="90" srcpinname="Y Output Value" dstnodeid="89" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden" id="92">
+   <BOUNDS type="Node" left="4410" top="5565" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="89" srcpinname="Output" dstnodeid="92" dstpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="92" srcpinname="X" dstnodeid="58" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="92" srcpinname="Y" dstnodeid="57" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="92" srcpinname="Z" dstnodeid="56" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="94">
+   <BOUNDS type="Node" left="4230" top="3375" width="915" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4230" top="3375" width="915" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="thresholds">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>
