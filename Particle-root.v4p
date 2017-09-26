@@ -1072,8 +1072,6 @@
    <PIN pinname="spawnFlag" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="443" srcpinname="Y Output Value" dstnodeid="425" dstpinname="reset/start">
-   </LINK>
    <LINK srcnodeid="435" srcpinname="Output" dstnodeid="425" dstpinname="plate attraction force">
    </LINK>
    <LINK srcnodeid="431" srcpinname="Texture Out" dstnodeid="425" dstpinname="depth texture">
@@ -1147,5 +1145,31 @@
    <LINK srcnodeid="554" srcpinname="Position Out" dstnodeid="448" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="513" srcpinname="Position Out" dstnodeid="540" dstpinname="Input">
+   </LINK>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="555">
+   <BOUNDS type="Node" left="6345" top="6855" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   <PIN pinname="Simulate" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Delay (Animation)" nodename="Delay (Animation)" componentmode="Hidden" id="556">
+   <BOUNDS type="Node" left="6315" top="7395" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Point">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="555" srcpinname="Bang" dstnodeid="556" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="443" srcpinname="Y Output Value" dstnodeid="425" dstpinname="reset/start">
+   </LINK>
+   <LINK srcnodeid="556" srcpinname="Output" dstnodeid="443" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
