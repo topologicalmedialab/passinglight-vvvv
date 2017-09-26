@@ -66,7 +66,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 		}
 	}
 	else if(Output[DTid.x].age.x > 1) {
-		if(spawnFlag > 0 || frac(time * 10 + id) < 0.001) {
+		if(spawnFlag > 0 || frac(time * 10 + id) < 0.0001) {
 			Output[DTid.x].vel = float3(0,0,0);
 			if((time < id && id < time + timeWindow)
 				|| (time < id + 1 && id + 1 < time + timeWindow)) {
