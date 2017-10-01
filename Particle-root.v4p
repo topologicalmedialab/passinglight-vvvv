@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="2880" scrolly="1545">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="3120" scrolly="3585">
    <BOUNDS type="Window" left="4665" top="3360" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -505,7 +505,7 @@
    </PIN>
    <PIN pinname="Output" visible="1" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Window" left="3960" top="1080" width="9000" height="13680">
+   <BOUNDS type="Window" left="4410" top="1080" width="9000" height="13680">
    </BOUNDS>
    </NODE>
    <NODE id="435" systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden">
