@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="3390" scrolly="540">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="2880" scrolly="1545">
    <BOUNDS type="Window" left="4665" top="3360" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -801,7 +801,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="11160" top="7830" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.09,0.58,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="-0.14,0.49,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1151,7 +1151,7 @@
    </BOUNDS>
    <PIN pinname="Bang" visible="1">
    </PIN>
-   <PIN pinname="Simulate" slicecount="1" values="0">
+   <PIN pinname="Simulate" slicecount="1" values="0" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Delay (Animation)" nodename="Delay (Animation)" componentmode="Hidden" id="556">
@@ -1169,8 +1169,6 @@
    <LINK srcnodeid="555" srcpinname="Bang" dstnodeid="556" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="443" srcpinname="Y Output Value" dstnodeid="425" dstpinname="reset/start">
-   </LINK>
-   <LINK srcnodeid="556" srcpinname="Output" dstnodeid="443" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden" id="557">
    <BOUNDS type="Node" left="4035" top="4110" width="100" height="100">
@@ -1196,6 +1194,8 @@
    </NODE>
    <LINK srcnodeid="450" srcpinname="Texture Out" dstnodeid="558" dstpinname="Texture In">
    </LINK>
-   <LINK srcnodeid="450" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
+   <LINK srcnodeid="488" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="556" srcpinname="Output" dstnodeid="443" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
