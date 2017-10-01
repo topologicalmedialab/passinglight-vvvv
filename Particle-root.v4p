@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="3225" scrolly="13155">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="6810" scrolly="6150">
    <BOUNDS type="Window" left="5985" top="2670" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -244,7 +244,7 @@
    <PIN pinname="GammaXYZW" slicecount="4" values="1,1,1,1">
    </PIN>
    </NODE>
-   <NODE id="465" systemname="PlateMask" filename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" componentmode="InAWindow">
+   <NODE id="465" systemname="PlateMask" filename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" componentmode="Hidden">
    <BOUNDS type="Node" left="15390" top="8880" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="675" top="8130" width="9000" height="6000">
@@ -494,13 +494,13 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE id="437" systemname="TiltCorrection" filename="%VVVV%\contributions\ParticleSelfCollide\TiltCorrection.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\TiltCorrection.v4p" componentmode="Hidden">
+   <NODE id="437" systemname="TiltCorrection" filename="%VVVV%\contributions\ParticleSelfCollide\TiltCorrection.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\TiltCorrection.v4p" componentmode="InAWindow">
    <BOUNDS type="Node" left="10530" top="6885" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <NODE id="436" systemname="SimpleTracker" filename="%VVVV%\contributions\ParticleSelfCollide\SimpleTracker.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\SimpleTracker.v4p" componentmode="InAWindow">
+   <NODE id="436" systemname="SimpleTracker" filename="%VVVV%\contributions\ParticleSelfCollide\SimpleTracker.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\SimpleTracker.v4p" componentmode="Hidden">
    <BOUNDS type="Node" left="8580" top="5310" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1" slicecount="1" values="||">
@@ -561,7 +561,7 @@
    </PIN>
    <PIN pinname="Default SizeXY" slicecount="2" visible="1" values="256,256">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="0">
+   <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE id="-6" systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden">
@@ -1046,7 +1046,7 @@
    </LINK>
    <LINK srcnodeid="546" srcpinname="OnChange" dstnodeid="538" dstpinname="Y Input Value">
    </LINK>
-   <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow">
+   <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="Hidden">
    <BOUNDS type="Node" left="6855" top="9555" width="3060" height="270">
    </BOUNDS>
    <BOUNDS type="Window" left="1275" top="4620" width="15030" height="10830">
@@ -1057,7 +1057,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="damp" slicecount="1" values="0.99">
+   <PIN pinname="damp" slicecount="1" values="0.98">
    </PIN>
    <PIN pinname="reset/start" slicecount="1" visible="1" values="0">
    </PIN>
@@ -1170,18 +1170,6 @@
    </LINK>
    <LINK srcnodeid="443" srcpinname="Y Output Value" dstnodeid="425" dstpinname="reset/start">
    </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="558">
-   <BOUNDS type="Node" left="8925" top="19350" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8925" top="19350" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="3300" top="7785" width="6240" height="5085">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="556" srcpinname="Output" dstnodeid="443" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="483" srcpinname="Layer" dstnodeid="421" dstpinname="Layers">
    </LINK>
    <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="595">
@@ -1205,8 +1193,6 @@
    <LINK srcnodeid="488" srcpinname="Texture Out" dstnodeid="595" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="595" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
-   </LINK>
-   <LINK srcnodeid="595" srcpinname="Texture Out" dstnodeid="558" dstpinname="Texture In">
    </LINK>
    <NODE systemname="ProjectionMask" filename="%VVVV%\contributions\ParticleSelfCollide\ProjectionMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ProjectionMask.v4p" componentmode="Hidden" id="596">
    <BOUNDS type="Node" left="11220" top="18030" width="100" height="100">
