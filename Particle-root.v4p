@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="6810" scrolly="6150">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="5685">
    <BOUNDS type="Window" left="5985" top="2670" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -385,9 +385,9 @@
    </PIN>
    </NODE>
    <NODE id="452" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4875" top="10200" width="795" height="480">
+   <BOUNDS type="Box" left="4980" top="12360" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4875" top="10200" width="0" height="0">
+   <BOUNDS type="Node" left="4980" top="12360" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1280,720">
    </PIN>
@@ -427,9 +427,9 @@
    </PIN>
    </NODE>
    <NODE id="449" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8640" top="8430" width="795" height="240">
+   <BOUNDS type="Box" left="8760" top="7965" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8640" top="8430" width="0" height="0">
+   <BOUNDS type="Node" left="8760" top="7965" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -439,7 +439,7 @@
    </PIN>
    </NODE>
    <NODE id="448" systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden">
-   <BOUNDS type="Node" left="8640" top="7950" width="100" height="100">
+   <BOUNDS type="Node" left="8760" top="7485" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -511,11 +511,11 @@
    </BOUNDS>
    </NODE>
    <NODE id="435" systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden">
-   <BOUNDS type="Node" left="8370" top="9000" width="330" height="270">
+   <BOUNDS type="Node" left="8490" top="8535" width="330" height="270">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0.46">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0.39">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -571,9 +571,9 @@
    </PIN>
    </NODE>
    <NODE id="428" systemname="Renderer (DX11 MRT)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 MRT)" componentmode="Hidden">
-   <BOUNDS type="Node" left="3690" top="11265" width="100" height="100">
+   <BOUNDS type="Node" left="3795" top="13425" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3690" top="11265" width="3000" height="3000">
+   <BOUNDS type="Box" left="3795" top="13425" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Layer" visible="1" slicecount="1" values="||">
    </PIN>
@@ -679,9 +679,9 @@
    <LINK srcnodeid="462" srcpinname="Transform Out" dstnodeid="457" dstpinname="Transform">
    </LINK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="506">
-   <BOUNDS type="Node" left="3630" top="10245" width="100" height="100">
+   <BOUNDS type="Node" left="3735" top="12405" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3630" top="10245" width="3000" height="3000">
+   <BOUNDS type="Box" left="3735" top="12405" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
@@ -709,9 +709,9 @@
    <LINK srcnodeid="506" srcpinname="Layer Out" dstnodeid="428" dstpinname="Layer">
    </LINK>
    <NODE systemname="Blend (DX11.RenderState Advanced)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState Advanced)" componentmode="Hidden" id="507">
-   <BOUNDS type="Node" left="1590" top="9735" width="100" height="100">
+   <BOUNDS type="Node" left="1695" top="11895" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1590" top="9735" width="3000" height="3000">
+   <BOUNDS type="Box" left="1695" top="11895" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
@@ -727,8 +727,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="507" srcpinname="Render State" dstnodeid="506" dstpinname="Render State">
-   </LINK>
-   <LINK srcnodeid="505" srcpinname="Layer" dstnodeid="506" dstpinname="Layer 1">
    </LINK>
    <LINK srcnodeid="473" srcpinname="Texture Out" dstnodeid="472" dstpinname="Texture In">
    </LINK>
@@ -1046,8 +1044,8 @@
    </LINK>
    <LINK srcnodeid="546" srcpinname="OnChange" dstnodeid="538" dstpinname="Y Input Value">
    </LINK>
-   <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="Hidden">
-   <BOUNDS type="Node" left="6855" top="9555" width="3060" height="270">
+   <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow">
+   <BOUNDS type="Node" left="6630" top="11820" width="3060" height="270">
    </BOUNDS>
    <BOUNDS type="Window" left="1275" top="4620" width="15030" height="10830">
    </BOUNDS>
@@ -1073,11 +1071,11 @@
    </PIN>
    <PIN pinname="spawnFlag" slicecount="1" visible="1" values="0">
    </PIN>
+   <PIN pinname="depth texture" visible="1">
+   </PIN>
+   <PIN pinname="plate attraction force" visible="1" slicecount="1" values="0.459716935157776">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="435" srcpinname="Output" dstnodeid="425" dstpinname="plate attraction force">
-   </LINK>
-   <LINK srcnodeid="431" srcpinname="Texture Out" dstnodeid="425" dstpinname="depth texture">
-   </LINK>
    <LINK srcnodeid="425" srcpinname="Output" dstnodeid="506" dstpinname="Layer 2">
    </LINK>
    <LINK srcnodeid="425" srcpinname="Buffers" dstnodeid="512" dstpinname="Texture">
@@ -1192,8 +1190,6 @@
    </NODE>
    <LINK srcnodeid="488" srcpinname="Texture Out" dstnodeid="595" dstpinname="Texture In">
    </LINK>
-   <LINK srcnodeid="595" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
-   </LINK>
    <NODE systemname="ProjectionMask" filename="%VVVV%\contributions\ParticleSelfCollide\ProjectionMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ProjectionMask.v4p" componentmode="Hidden" id="596">
    <BOUNDS type="Node" left="11220" top="18030" width="100" height="100">
    </BOUNDS>
@@ -1201,5 +1197,115 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="596" srcpinname="Texture Out" dstnodeid="595" dstpinname="Texture In 2">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="600">
+   <BOUNDS type="Node" left="11625" top="9300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ">
+   </PIN>
+   <PIN pinname="Rotate" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1" slicecount="1" values="0.64">
+   </PIN>
+   <PIN pinname="ScaleY" visible="1" slicecount="1" values="1.15">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" visible="1" values="0.54">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" visible="1" values="0.1">
+   </PIN>
+   </NODE>
+   <NODE systemname="PlateMask" filename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" componentmode="InAWindow" id="599">
+   <BOUNDS type="Node" left="11625" top="9735" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5415" top="8085" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="600" srcpinname="Transform Out" dstnodeid="599" dstpinname="View">
+   </LINK>
+   <NODE systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden" id="602">
+   <BOUNDS type="Node" left="11355" top="8760" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="525" srcpinname="Y Output Value" dstnodeid="602" dstpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="602" srcpinname="X" dstnodeid="600" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="602" srcpinname="Y" dstnodeid="600" dstpinname="TranslateY">
+   </LINK>
+   <NODE id="603" systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden">
+   <BOUNDS type="Node" left="9645" top="11325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" values="0.77">
+   </PIN>
+   <PIN pinname="Texture In 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="Sub">
+   </PIN>
+   <PIN pinname="Default SizeXY" slicecount="2" visible="1" values="256,256">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="431" srcpinname="Texture Out" dstnodeid="603" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Levels (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Levels.tfx" nodename="Levels (DX11.TextureFX)" componentmode="Hidden" id="604">
+   <BOUNDS type="Node" left="10755" top="10260" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="Clip_Both">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Output Black" slicecount="1" visible="1" values="|0.10655,0.10655,0.10655,0.00000|">
+   </PIN>
+   <PIN pinname="Output White" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="599" srcpinname="Texture Out" dstnodeid="604" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="603" srcpinname="Texture Out" dstnodeid="425" dstpinname="depth texture">
+   </LINK>
+   <LINK srcnodeid="595" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="605">
+   <BOUNDS type="Node" left="8820" top="9105" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="435" srcpinname="Output" dstnodeid="605" dstpinname="Value">
+   </LINK>
+   <LINK srcnodeid="605" srcpinname="Output" dstnodeid="604" dstpinname="Output Black">
+   </LINK>
+   <NODE systemname="Blur (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Blur.tfx" nodename="Blur (DX11.TextureFX)" componentmode="Hidden" id="606">
+   <BOUNDS type="Node" left="10815" top="10695" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="604" srcpinname="Texture Out" dstnodeid="606" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="606" srcpinname="Texture Out" dstnodeid="603" dstpinname="Texture In 2">
    </LINK>
    </PATCH>

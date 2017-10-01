@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="0" scrolly="5040">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="5670" scrolly="570">
    <BOUNDS height="10830" left="1275" top="4620" type="Window" width="15030">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
@@ -171,7 +171,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6285" top="5685" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.99">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.98">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -797,36 +797,6 @@
    <LINK srcnodeid="549" srcpinname="Output" dstnodeid="361" dstpinname="X">
    </LINK>
    <LINK srcnodeid="412" srcpinname="Layer Out" dstnodeid="510" dstpinname="Layer">
-   </LINK>
-   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="551">
-   <BOUNDS type="Node" left="9585" top="6600" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" values="0.03">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="551" srcpinname="Output" dstnodeid="461" dstpinname="plateAttraction">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="552">
-   <BOUNDS type="Box" left="9585" top="6135" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="9585" top="6135" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.22">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|plate attraction force|">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="552" srcpinname="Y Output Value" dstnodeid="551" dstpinname="Input 1">
    </LINK>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="562" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="12105" top="12015" width="100" height="100">
