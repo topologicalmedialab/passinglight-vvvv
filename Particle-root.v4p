@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="300" scrolly="-360">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="300" scrolly="5760">
    <BOUNDS type="Window" left="5985" top="2670" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -785,7 +785,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="10245" top="7905" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.28,-0.89,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="-0.44,-0.51,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1182,10 +1182,10 @@
    <PIN pinname="Texture In" visible="1">
    </PIN>
    </NODE>
+   <LINK srcnodeid="488" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="488" srcpinname="Texture Out" dstnodeid="558" dstpinname="Texture In">
+   </LINK>
    <LINK srcnodeid="556" srcpinname="Output" dstnodeid="443" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="458" srcpinname="Texture Out" dstnodeid="558" dstpinname="Texture In">
-   </LINK>
-   <LINK srcnodeid="458" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
    </LINK>
    </PATCH>
