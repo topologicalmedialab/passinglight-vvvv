@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="870" scrolly="2445">
-   <BOUNDS type="Window" left="2865" top="3810" width="12390" height="10545">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="3390" scrolly="540">
+   <BOUNDS type="Window" left="4665" top="3360" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -459,17 +459,19 @@
    </PIN>
    </NODE>
    <NODE id="445" systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden">
-   <BOUNDS type="Node" left="10680" top="2670" width="100" height="100">
+   <BOUNDS type="Node" left="10755" top="3000" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="0.53">
+   <PIN pinname="TranslateY" slicecount="1" values="0.26">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="0.055">
+   <PIN pinname="TranslateX" slicecount="1" values="0.04">
    </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="1.59">
+   <PIN pinname="ScaleY" slicecount="1" values="1.65">
    </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="1.2">
+   <PIN pinname="ScaleX" slicecount="1" values="1.29">
+   </PIN>
+   <PIN pinname="Rotate" slicecount="1" values="0.01">
    </PIN>
    </NODE>
    <NODE id="443" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
@@ -1128,8 +1130,6 @@
    </LINK>
    <LINK srcnodeid="549" srcpinname="Texture Out" dstnodeid="488" dstpinname="Texture In 2">
    </LINK>
-   <LINK srcnodeid="488" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
-   </LINK>
    <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="554">
    <BOUNDS type="Node" left="8520" top="6285" width="100" height="100">
    </BOUNDS>
@@ -1171,5 +1171,31 @@
    <LINK srcnodeid="443" srcpinname="Y Output Value" dstnodeid="425" dstpinname="reset/start">
    </LINK>
    <LINK srcnodeid="556" srcpinname="Output" dstnodeid="443" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden" id="557">
+   <BOUNDS type="Node" left="4035" top="4110" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4035" top="4110" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="825" top="3210" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="457" srcpinname="Buffers" dstnodeid="557" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="558">
+   <BOUNDS type="Node" left="6975" top="18750" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6975" top="18750" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="180" top="5475" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="450" srcpinname="Texture Out" dstnodeid="558" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="450" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
    </LINK>
    </PATCH>
