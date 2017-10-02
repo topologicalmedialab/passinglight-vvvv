@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="6225">
-   <BOUNDS type="Window" left="5715" top="3915" width="12390" height="10545">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="5265">
+   <BOUNDS type="Window" left="2250" top="4215" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -494,7 +494,7 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE id="437" systemname="TiltCorrection" filename="%VVVV%\contributions\ParticleSelfCollide\TiltCorrection.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\TiltCorrection.v4p" componentmode="InAWindow">
+   <NODE id="437" systemname="TiltCorrection" filename="%VVVV%\contributions\ParticleSelfCollide\TiltCorrection.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\TiltCorrection.v4p" componentmode="Hidden">
    <BOUNDS type="Node" left="10530" top="6885" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
@@ -1047,7 +1047,7 @@
    <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow">
    <BOUNDS type="Node" left="6630" top="11820" width="3060" height="270">
    </BOUNDS>
-   <BOUNDS type="Window" left="-1320" top="3660" width="15030" height="10830">
+   <BOUNDS type="Window" left="480" top="2595" width="15030" height="10830">
    </BOUNDS>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>

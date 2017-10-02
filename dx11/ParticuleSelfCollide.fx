@@ -12,6 +12,7 @@ float floorThreshold;
 
 Texture2D tex <string uiname="Texture";>;
 Texture2D texDepth <string uiname="Depth Texture";>;
+Texture2D texNoise <string uiname="Noise Texture";>;
 
 SamplerState mySampler : IMMUTABLE
 {
@@ -89,8 +90,6 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 		float2 pNew ={0.0f,0.0f};
         float2 d_1n ={0.0f,0.0f};
 		
-        float2 d_2n ={0.0f,0.0f};
-		
 		float depth = texDepth.SampleLevel(mySampler, (float2(p.x*0.5f,p.y*-0.5f) )+0.5f,0).r ;
 		float isOnFloor = depth < floorThreshold;
 
@@ -98,18 +97,18 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 
 	        pNew.x = cos(((1.0f/samples)*i*2.0f*PI))*radius;
 	        pNew.y = sin(((1.0f/samples)*i*2.0f*PI))*radius;
-		
-	        d_1n +=  pNew * tex.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r ;
+
+	    	if(isOnFloor) {
+	        	//float d = texNoise.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
+		    	//d_1n += 1*pNew * d;
+	    	} else {
+	        	d_1n += pNew * tex.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
+		    	float d = texDepth.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
+		    	float dcoeff = 100;
+		        d_1n += pNew * d * dcoeff;
+	    	}
 	    	
-	    	float d = texDepth.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
-	    	// if destination is on floor
-	    	//if(!isOnFloor && d < floorThreshold)
-	    	//	d = 0.8;
-	    	
-	    	float dcoeff = 100;
-	        d_2n += pNew * d * dcoeff;
         }
-		d_1n += d_2n;
 		float3 fieldsAdd = float3(d_1n * float2(force * 1.0f,force * 1.0f),0);
 		
 		// drain
@@ -118,7 +117,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 			drainVel /= length(drainVel);
 			drainVel *= 0.00003f;
 			drainVel.y *= 0.5;
-			fieldsAdd = drainVel;
+			fieldsAdd += drainVel;
 			Output[DTid.x].age.x += 0.00001;
 			
 			float3 plateVel = platePos - Output[DTid.x].pos;

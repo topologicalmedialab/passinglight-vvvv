@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="195" scrolly="8205">
-   <BOUNDS height="10830" left="7260" top="3930" type="Window" width="15030">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="0" scrolly="6690">
+   <BOUNDS height="10830" left="480" top="2595" type="Window" width="15030">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="7185" top="9150" width="100" height="100">
@@ -569,6 +569,8 @@
    </PIN>
    <PIN pinname="time" visible="1">
    </PIN>
+   <PIN pinname="Noise Texture" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <LINK srcnodeid="461" srcpinname="Layer" dstnodeid="297" dstpinname="Layer">
    </LINK>
@@ -808,7 +810,7 @@
    </NODE>
    <LINK srcnodeid="562" srcpinname="Texture Out" dstnodeid="511" dstpinname="texture2d">
    </LINK>
-   <NODE id="492" systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow">
+   <NODE id="492" systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden">
    <BOUNDS type="Node" left="1695" top="16260" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="1695" top="16260" width="6000" height="4500">
@@ -1269,11 +1271,11 @@
    <LINK srcnodeid="586" srcpinname="Y Output Value" dstnodeid="588" dstpinname="Input">
    </LINK>
    <NODE systemname="Perlin (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Perlin.tfx" nodename="Perlin (DX11.TextureFX)" componentmode="Hidden" id="594">
-   <BOUNDS type="Node" left="1110" top="12495" width="100" height="100">
+   <BOUNDS type="Node" left="16215" top="5865" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Color2" slicecount="1" values="|0.53861,0.53861,0.53861,1.00000|">
+   <PIN pinname="Color2" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="FrequencyBalance" slicecount="1" values="-0.08">
    </PIN>
@@ -1283,35 +1285,13 @@
    </PIN>
    <PIN pinname="RandomSeed" slicecount="1" values="0.17">
    </PIN>
-   <PIN pinname="Amplitude" slicecount="1" values="0.7">
+   <PIN pinname="Amplitude" slicecount="1" values="2.82">
    </PIN>
    <PIN pinname="Color1" slicecount="1" values="|0.00000,0.00000,0.00000,0.00000|">
    </PIN>
    </NODE>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="595">
-   <BOUNDS type="Node" left="1245" top="13020" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1245" top="13020" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="1695" top="390" width="6240" height="5085">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="594" srcpinname="Texture Out" dstnodeid="595" dstpinname="Texture In">
-   </LINK>
-   <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="596">
-   <BOUNDS type="Node" left="1560" top="13410" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1560" top="13410" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="594" srcpinname="Texture Out" dstnodeid="596" dstpinname="Texture">
-   </LINK>
    <LINK srcnodeid="462" srcpinname="Layer" dstnodeid="412" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="594" srcpinname="Texture Out" dstnodeid="461" dstpinname="Noise Texture">
    </LINK>
    </PATCH>
