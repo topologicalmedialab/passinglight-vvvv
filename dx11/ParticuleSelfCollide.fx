@@ -51,12 +51,13 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 	int m = 8192;
 	float id = (float)DTid.x / m;
 	float timeWindow = 0.25;
+	float timef = fmod(time, 1);
 	
 	if (reset)
 	{
 		Output[DTid.x].vel = float3(0,0,0);
-		if((time < id && id < time + timeWindow)
-			|| (time < id + 1 && id + 1 < time + timeWindow)) {
+		if((timef < id && id < timef + timeWindow)
+			|| (timef < id + 1 && id + 1 < timef + timeWindow)) {
 			Output[DTid.x].pos = resetPos[DTid.x];
 			Output[DTid.x].age = float3(0, 0, 0);
 		}
@@ -68,8 +69,8 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 	else if(Output[DTid.x].age.x > 1) {
 		if(spawnFlag > 0) {
 			Output[DTid.x].vel = float3(0,0,0);
-			if((time < id && id < time + timeWindow)
-				|| (time < id + 1 && id + 1 < time + timeWindow)) {
+			if((timef < id && id < timef + timeWindow)
+				|| (timef < id + 1 && id + 1 < timef + timeWindow)) {
 				Output[DTid.x].pos = resetPos[DTid.x];
 				Output[DTid.x].age = float3(0, 0, 0);
 			}
@@ -100,8 +101,8 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 	        pNew.y = sin(((1.0f/samples)*i*2.0f*PI))*radius;
 
 	    	if(isOnFloor) {
-	        	//float d = texNoise.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
-		    	//d_1n += 1*pNew * d;
+	        	float d = tex.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
+		    	d_1n += 1*pNew * d;
 	    	} else {
 	        	d_1n += pNew * tex.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
 		    	float d = texDepth.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
@@ -122,13 +123,13 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 				drainVel /= drainLen;
 				drainVel *= 0.00003f;
 				drainVel.y *= 0.5;
-				fieldsAdd = drainVel;
+				fieldsAdd += drainVel;
 				Output[DTid.x].age.x += 0.00001;
 			} else {
 				humanVel /= humanLen;
-				humanVel *= 0.0001f;
+				humanVel *= 0.0002f;
 				humanVel.y *= 0.5;
-				fieldsAdd = humanVel;
+				fieldsAdd += humanVel;
 				Output[DTid.x].age.x += 0.00001;
 			}
 
