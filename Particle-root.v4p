@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="4605">
-   <BOUNDS type="Window" left="5985" top="2670" width="12390" height="10545">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="6225">
+   <BOUNDS type="Window" left="5715" top="3915" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -477,9 +477,9 @@
    </PIN>
    </NODE>
    <NODE id="443" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7995" top="8040" width="480" height="480">
+   <BOUNDS type="Box" left="6480" top="8220" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="7995" top="8040" width="0" height="0">
+   <BOUNDS type="Node" left="6480" top="8220" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -515,7 +515,7 @@
    </BOUNDS>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0.39">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0.38">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -781,7 +781,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="10245" top="7905" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="-0.44,-0.51,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="-0.66,-0.72,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1047,7 +1047,7 @@
    <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow">
    <BOUNDS type="Node" left="6630" top="11820" width="3060" height="270">
    </BOUNDS>
-   <BOUNDS type="Window" left="1275" top="4620" width="15030" height="10830">
+   <BOUNDS type="Window" left="-1320" top="3660" width="15030" height="10830">
    </BOUNDS>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1216,10 +1216,10 @@
    <PIN pinname="TranslateX" slicecount="1" visible="1" values="0.1">
    </PIN>
    </NODE>
-   <NODE systemname="PlateMask" filename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" componentmode="InAWindow" id="599">
+   <NODE systemname="PlateMask" filename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" componentmode="Hidden" id="599">
    <BOUNDS type="Node" left="11625" top="9735" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="5415" top="8085" width="9000" height="6000">
+   <BOUNDS type="Window" left="1080" top="7425" width="9000" height="6000">
    </BOUNDS>
    <PIN pinname="View" visible="1">
    </PIN>
@@ -1282,8 +1282,6 @@
    </LINK>
    <LINK srcnodeid="603" srcpinname="Texture Out" dstnodeid="425" dstpinname="depth texture">
    </LINK>
-   <LINK srcnodeid="595" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
-   </LINK>
    <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="605">
    <BOUNDS type="Node" left="8820" top="9105" width="100" height="100">
    </BOUNDS>
@@ -1303,11 +1301,73 @@
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.42">
+   </PIN>
    </NODE>
    <LINK srcnodeid="604" srcpinname="Texture Out" dstnodeid="606" dstpinname="Texture In">
    </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="607">
+   <BOUNDS type="Node" left="10695" top="11760" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10695" top="11760" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="780" top="2880" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="595" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="606" srcpinname="Texture Out" dstnodeid="607" dstpinname="Texture In">
+   </LINK>
    <LINK srcnodeid="606" srcpinname="Texture Out" dstnodeid="603" dstpinname="Texture In 2">
    </LINK>
-   <LINK srcnodeid="556" srcpinname="Output" dstnodeid="443" dstpinname="Y Input Value">
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="608" filename="">
+   <BOUNDS type="Node" left="7335" top="6300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="6.02">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="609">
+   <BOUNDS type="Node" left="7350" top="6765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="6.28318530717959">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="608" srcpinname="Output" dstnodeid="609" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Sin (Differential)" nodename="Sin (Differential)" componentmode="Hidden" id="610">
+   <BOUNDS type="Node" left="7440" top="7155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position In" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="609" srcpinname="Output" dstnodeid="610" dstpinname="Position In">
+   </LINK>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="611">
+   <BOUNDS type="Node" left="7545" top="7545" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source Minimum" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.4">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="610" srcpinname="Position Out" dstnodeid="611" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="611" srcpinname="Output" dstnodeid="435" dstpinname="Input 1">
    </LINK>
    </PATCH>
