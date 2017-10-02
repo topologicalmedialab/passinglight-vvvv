@@ -106,7 +106,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 	    	} else {
 	        	d_1n += pNew * tex.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
 		    	float d = texDepth.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
-		    	float dcoeff = 100;
+		    	float dcoeff = 300;
 		        d_1n += pNew * d * dcoeff;
 	    	}
 	    	
