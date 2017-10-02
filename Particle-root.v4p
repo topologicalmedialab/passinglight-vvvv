@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="5265">
-   <BOUNDS type="Window" left="2250" top="4215" width="12390" height="10545">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="4395" scrolly="2520">
+   <BOUNDS type="Window" left="9000" top="4395" width="12390" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -1075,6 +1075,8 @@
    </PIN>
    <PIN pinname="plate attraction force" visible="1" slicecount="1" values="0.459716935157776">
    </PIN>
+   <PIN pinname="humanPosXYZ" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="425" srcpinname="Output" dstnodeid="506" dstpinname="Layer 2">
    </LINK>
@@ -1369,5 +1371,107 @@
    <LINK srcnodeid="610" srcpinname="Position Out" dstnodeid="611" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="611" srcpinname="Output" dstnodeid="435" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Tracker (EX9.Texture Analysis)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Analysis\Tracker\Tracker (EX9.Texture Analysis).v4p" nodename="Tracker (EX9.Texture Analysis)" componentmode="Hidden" id="615">
+   <BOUNDS type="Node" left="7680" top="3765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Threshold Preview" visible="1">
+   </PIN>
+   <PIN pinname="Track Color" slicecount="1" values="|0.24339,0.37650,0.39198,1.00000|">
+   </PIN>
+   <PIN pinname="Show Gizmo" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Tolerance" slicecount="1" values="0.48">
+   </PIN>
+   <PIN pinname="Out X" visible="1">
+   </PIN>
+   <PIN pinname="Out Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Levels (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Levels\Levels (EX9.Texture Filter).v4p" nodename="Levels (EX9.Texture Filter)" componentmode="Hidden" id="617">
+   <BOUNDS type="Node" left="7620" top="2535" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="ClampBoth">
+   </PIN>
+   <PIN pinname="Output White" slicecount="1" values="|0.45845,0.45845,0.45845,1.00000|">
+   </PIN>
+   <PIN pinname="Input Black" slicecount="1" values="|0.99022,0.99022,0.99022,0.00000|">
+   </PIN>
+   <PIN pinname="Input White" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="424" srcpinname="Texture Out" dstnodeid="617" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="617" srcpinname="Output" dstnodeid="615" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="618">
+   <BOUNDS type="Node" left="7410" top="4215" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="1.29">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="619">
+   <BOUNDS type="Node" left="8070" top="4320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="1.65">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="620">
+   <BOUNDS type="Node" left="7410" top="4710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="0.04">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="621">
+   <BOUNDS type="Node" left="8055" top="4785" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="0.26">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="622">
+   <BOUNDS type="Node" left="7515" top="5220" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="620" srcpinname="Output" dstnodeid="622" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="621" srcpinname="Output" dstnodeid="622" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="622" srcpinname="XYZ" dstnodeid="425" dstpinname="humanPosXYZ">
+   </LINK>
+   <LINK srcnodeid="615" srcpinname="Out X" dstnodeid="620" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="615" srcpinname="Out Y" dstnodeid="621" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="621" srcpinname="Output" dstnodeid="619" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="620" srcpinname="Output" dstnodeid="618" dstpinname="Input 1">
    </LINK>
    </PATCH>

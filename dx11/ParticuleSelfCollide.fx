@@ -25,6 +25,7 @@ StructuredBuffer<float3> resetPos;
 
 float3 drainPos;
 float3 platePos;
+float3 humanPos;
 
 float aging;
 int spawnFlag;
@@ -114,12 +115,23 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 		// drain
 		if(isOnFloor) {
 			float3 drainVel = drainPos - Output[DTid.x].pos;
-			drainVel /= length(drainVel);
-			drainVel *= 0.00003f;
-			drainVel.y *= 0.5;
-			fieldsAdd += drainVel;
-			Output[DTid.x].age.x += 0.00001;
-			
+			float3 humanVel = humanPos - Output[DTid.x].pos;
+			float drainLen = length(drainVel);
+			float humanLen = length(humanVel);
+			if(drainLen < humanLen) {
+				drainVel /= drainLen;
+				drainVel *= 0.00003f;
+				drainVel.y *= 0.5;
+				fieldsAdd = drainVel;
+				Output[DTid.x].age.x += 0.00001;
+			} else {
+				humanVel /= humanLen;
+				humanVel *= 0.0001f;
+				humanVel.y *= 0.5;
+				fieldsAdd = humanVel;
+				Output[DTid.x].age.x += 0.00001;
+			}
+
 			float3 plateVel = platePos - Output[DTid.x].pos;
 			float pv = length(plateVel * float3(1, 9.0/16.0, 0));
 			if(pv < 0.5) {
