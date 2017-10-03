@@ -104,6 +104,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 
 	    	if(isOnFloor) {
 	        	float d = tex.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
+	        	//d += (sin(time) + 3) * texNoise.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
 		    	d_1n += 1*pNew * d;
 	    	} else {
 	        	d_1n += pNew * tex.SampleLevel(mySampler, (float2((p.x + pNew.x)*0.5f,(p.y + pNew.y)*-0.5f) )+0.5f,0).r;
@@ -122,22 +123,23 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 		// drain
 		if(isOnFloor) {
 			Output[DTid.x].age.y += 1; // flag to indicate it's on the floor
-			float3 drainVel = drainPos - Output[DTid.x].pos;
-			float drainLen = length(drainVel);
-			drainVel /= drainLen;
-			drainVel *= 0.00003f;
-			drainVel.y *= 0.5;
-			fieldsAdd = drainVel;
-			Output[DTid.x].age.x += 0.00001;
 
 			float3 plateVel = platePos - Output[DTid.x].pos;
 			float pv = length(plateVel * float3(1, 9.0/16.0, 0));
 			if(pv < 0.5) {
 				plateVel /= pv;
-				plateVel *= -0.00005f;
-				plateVel.y *= 0.5;
+				plateVel *= -0.00003f;
 				fieldsAdd += plateVel;
 			}
+			//else {
+				float3 drainVel = drainPos - Output[DTid.x].pos;
+				float drainLen = length(drainVel);
+				drainVel /= drainLen;
+				drainVel *= 0.00005f;
+				//drainVel.y *= 0.5;
+				fieldsAdd += drainVel;
+				Output[DTid.x].age.x += 0.00001;
+			//}
 		}
 		else {
 			Output[DTid.x].age.y -= 1;
