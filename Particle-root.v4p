@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="14265" scrolly="20370">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="2640">
    <BOUNDS type="Window" left="6180" top="1800" width="12150" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -21,7 +21,7 @@
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Input" slicecount="1" visible="1" values="0">
+   <PIN pinname="Input" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Texture In 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -630,8 +630,6 @@
    </LINK>
    <LINK srcnodeid="449" srcpinname="Y Output Value" dstnodeid="435" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="447" srcpinname="tween" dstnodeid="488" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="448" srcpinname="Output" dstnodeid="449" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="450" srcpinname="Texture Out" dstnodeid="466" dstpinname="Texture In">
@@ -1126,8 +1124,6 @@
    </LINK>
    <LINK srcnodeid="467" srcpinname="Texture Out" dstnodeid="549" dstpinname="Texture In">
    </LINK>
-   <LINK srcnodeid="549" srcpinname="Texture Out" dstnodeid="488" dstpinname="Texture In 2">
-   </LINK>
    <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="554">
    <BOUNDS type="Node" left="8520" top="6285" width="100" height="100">
    </BOUNDS>
@@ -1153,7 +1149,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Delay (Animation)" nodename="Delay (Animation)" componentmode="Hidden" id="556">
-   <BOUNDS type="Node" left="6315" top="7395" width="100" height="100">
+   <BOUNDS type="Node" left="6465" top="7365" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1188,14 +1184,6 @@
    <PIN pinname="Default SizeXY" slicecount="2" visible="1" values="256,256">
    </PIN>
    </NODE>
-   <NODE systemname="ProjectionMask" filename="%VVVV%\contributions\ParticleSelfCollide\ProjectionMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ProjectionMask.v4p" componentmode="InAWindow" id="596">
-   <BOUNDS type="Node" left="11220" top="18030" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="596" srcpinname="Texture Out" dstnodeid="595" dstpinname="Texture In 2">
-   </LINK>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="600">
    <BOUNDS type="Node" left="11625" top="9300" width="100" height="100">
    </BOUNDS>
@@ -1904,30 +1892,6 @@
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="676" nodename="Renderer (DX11)" systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll">
-   <BOUNDS height="100" left="18735" top="25995" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="2520" left="18735" top="25995" type="Box" width="2595">
-   </BOUNDS>
-   <BOUNDS height="5010" left="2520" top="8175" type="Window" width="4785">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" filename="Line (DX11).v4p" id="675" nodename="Line (DX11)" systemname="Line (DX11)">
    <BOUNDS height="100" left="18735" top="25455" type="Node" width="100">
    </BOUNDS>
@@ -1943,7 +1907,7 @@
    </PIN>
    <PIN pinname="Single Input" visible="1">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="13">
+   <PIN pinname="Width" slicecount="1" values="5">
    </PIN>
    <PIN pinname="BinSize">
    </PIN>
@@ -1951,7 +1915,7 @@
    </PIN>
    <PIN pinname="Pattern" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    <PIN pinname="PatternScale" slicecount="1" values="3">
    </PIN>
@@ -1961,8 +1925,6 @@
    <LINK dstnodeid="675" dstpinname="Single Input" srcnodeid="681" srcpinname="Y Output Value">
    </LINK>
    <LINK srcnodeid="677" srcpinname="Y Output Value" dstnodeid="675" dstpinname="BinSize">
-   </LINK>
-   <LINK srcnodeid="675" srcpinname="Layer" dstnodeid="676" dstpinname="Layers">
    </LINK>
    <NODE componentmode="InABox" id="682" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="23475" top="17160" type="Node" width="0">
@@ -2132,8 +2094,6 @@
    <PIN pinname="Width" slicecount="1" values="0.14">
    </PIN>
    </NODE>
-   <LINK srcnodeid="693" srcpinname="Texture Out" dstnodeid="595" dstpinname="Texture In">
-   </LINK>
    <NODE componentmode="InABox" id="695" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="29385" top="22290" type="Node" width="0">
    </BOUNDS>
@@ -2251,7 +2211,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Switch" slicecount="1" values="1" visible="1">
+   <PIN pinname="Switch" slicecount="1" visible="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="685" srcpinname="XYZ" dstnodeid="698" dstpinname="Input 1">
@@ -2273,7 +2233,7 @@
    </PIN>
    <PIN pinname="Target Format" slicecount="1" values="R8G8B8A8_UNorm">
    </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.01564,0.01564,0.01564,1.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Texture SizeXY" slicecount="2" values="512,512">
    </PIN>
@@ -2285,5 +2245,31 @@
    <LINK srcnodeid="447" srcpinname="tween" dstnodeid="687" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="447" srcpinname="Y" dstnodeid="698" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="ProjectionMask" filename="%VVVV%\contributions\ParticleSelfCollide\ProjectionMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ProjectionMask.v4p" componentmode="InAWindow" id="701">
+   <BOUNDS type="Node" left="10320" top="17760" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="701" srcpinname="Texture Out" dstnodeid="595" dstpinname="Texture In 2">
+   </LINK>
+   <LINK srcnodeid="693" srcpinname="Texture Out" dstnodeid="488" dstpinname="Texture In 2">
+   </LINK>
+   <LINK srcnodeid="488" srcpinname="Texture Out" dstnodeid="595" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="702">
+   <BOUNDS type="Node" left="4305" top="3630" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4305" top="3630" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="2070" top="6510" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="459" srcpinname="Texture Out" dstnodeid="702" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="556" srcpinname="Output" dstnodeid="443" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
