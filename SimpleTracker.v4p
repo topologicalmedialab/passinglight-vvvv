@@ -158,8 +158,6 @@
    <PIN pinname="Columns" slicecount="1" values="2">
    </PIN>
    </NODE>
-   <LINK srcnodeid="78" srcpinname="Y Output Value" dstnodeid="77" dstpinname="XY">
-   </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="79" systemname="IOBox (Color)">
    <BOUNDS type="Box" left="3180" top="2790" width="2250" height="480">
    </BOUNDS>
@@ -221,7 +219,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4275" top="3645" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.06,0.06,0.06">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.17,0.17,0.17">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -359,7 +357,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6195" top="2220" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="6" visible="1" values="0.53,-0.46,0.21,-0.46,0,-0.46">
+   <PIN pinname="Y Input Value" slicecount="6" visible="1" values="0.53,-0.53,0.21,-0.53,0,-0.53">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -370,6 +368,8 @@
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Columns" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="102">
@@ -400,4 +400,24 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="104">
+   <BOUNDS type="Box" left="5685" top="4020" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5685" top="4020" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.06,0.06,0.06">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="101" srcpinname="Y Output Value" dstnodeid="77" dstpinname="XY">
+   </LINK>
    </PATCH>
