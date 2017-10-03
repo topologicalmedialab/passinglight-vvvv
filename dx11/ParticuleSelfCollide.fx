@@ -50,12 +50,13 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 	
 	int m = 8192;
 	float id = (float)DTid.x / m;
-	float timeWindow = 0.125;
+	float timeWindow = 100;0.125;
 	float timef = fmod(time, 1);
 	
 	if (reset)
 	{
-		Output[DTid.x].vel = float3(0,0,0);
+		float3 relpos = (resetPos[DTid.x] - platePos);
+		Output[DTid.x].vel = relpos * 0.05;
 		if((timef < id && id < timef + timeWindow)
 			|| (timef < id + 1 && id + 1 < timef + timeWindow)) {
 			Output[DTid.x].pos = resetPos[DTid.x];
@@ -68,7 +69,8 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 	}
 	else if(Output[DTid.x].age.x > 1) {
 		if(spawnFlag > 0) {
-			Output[DTid.x].vel = float3(0,0,0);
+			float3 relpos = (resetPos[DTid.x] - platePos);
+			Output[DTid.x].vel = relpos * 0.05;
 			if((timef < id && id < timef + timeWindow)
 				|| (timef < id + 1 && id + 1 < timef + timeWindow)) {
 				Output[DTid.x].pos = resetPos[DTid.x];

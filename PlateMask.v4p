@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
    <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\PlateMask.v4p" systemname="PlateMask" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\PlateMask.v4p">
-   <BOUNDS type="Window" left="5415" top="8085" width="9000" height="6000">
+   <BOUNDS type="Window" left="1080" top="7425" width="9000" height="6000">
    </BOUNDS>
    <NODE systemname="Segment (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Segment (DX11.Geometry)" componentmode="Hidden" id="10">
    <BOUNDS type="Node" left="1455" top="1200" width="100" height="100">
@@ -127,7 +127,7 @@
    </PIN>
    <PIN pinname="Output X" visible="1">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="3.2">
+   <PIN pinname="Width" slicecount="1" values="4.45">
    </PIN>
    <PIN pinname="Height" slicecount="1" values="1">
    </PIN>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="7335" scrolly="12105">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="1980">
    <BOUNDS type="Window" left="3420" top="1365" width="12150" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -179,16 +179,16 @@
    </PIN>
    <PIN pinname="Rotate" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="ScaleX" visible="1" slicecount="1" values="1.68">
+   <PIN pinname="ScaleX" visible="1" slicecount="1" values="1.64">
    </PIN>
-   <PIN pinname="ScaleY" visible="1" slicecount="1" values="2.4">
+   <PIN pinname="ScaleY" visible="1" slicecount="1" values="3.45">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="0.54">
+   <PIN pinname="TranslateY" slicecount="1" values="0.51">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="0.1">
+   <PIN pinname="TranslateX" slicecount="1" values="-0.09">
    </PIN>
    </NODE>
-   <NODE systemname="PlateMask" filename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" componentmode="Hidden" id="468">
+   <NODE systemname="PlateMask" filename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" componentmode="InAWindow" id="468">
    <BOUNDS type="Node" left="3480" top="6600" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="5415" top="8085" width="9000" height="6000">
@@ -310,6 +310,8 @@
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Flush" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE id="459" systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden">
@@ -499,6 +501,8 @@
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
+   <BOUNDS type="Window" left="1290" top="5085" width="9000" height="6000">
+   </BOUNDS>
    </NODE>
    <NODE id="436" systemname="SimpleTracker" filename="%VVVV%\contributions\ParticleSelfCollide\SimpleTracker.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\SimpleTracker.v4p" componentmode="InAWindow">
    <BOUNDS type="Node" left="3795" top="5160" width="100" height="100">
@@ -1314,8 +1318,6 @@
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="595" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
-   </LINK>
    <LINK srcnodeid="606" srcpinname="Texture Out" dstnodeid="607" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="606" srcpinname="Texture Out" dstnodeid="603" dstpinname="Texture In 2">
@@ -1409,7 +1411,7 @@
    <NODE systemname="Blur (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Blur.tfx" nodename="Blur (DX11.TextureFX)" componentmode="Hidden" id="634">
    <BOUNDS type="Node" left="3795" top="4605" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -1419,6 +1421,8 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="634" srcpinname="Texture Out" dstnodeid="436" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="595" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
    </LINK>
    <LINK srcnodeid="458" srcpinname="Texture Out" dstnodeid="634" dstpinname="Texture In">
    </LINK>
