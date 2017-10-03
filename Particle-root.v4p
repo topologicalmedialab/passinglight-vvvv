@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="0" scrolly="1980">
-   <BOUNDS type="Window" left="3420" top="1365" width="12150" height="10545">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="555" scrolly="9075">
+   <BOUNDS type="Window" left="5820" top="2595" width="12150" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -188,7 +188,7 @@
    <PIN pinname="TranslateX" slicecount="1" values="-0.09">
    </PIN>
    </NODE>
-   <NODE systemname="PlateMask" filename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" componentmode="InAWindow" id="468">
+   <NODE systemname="PlateMask" filename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\PlateMask.v4p" componentmode="Hidden" id="468">
    <BOUNDS type="Node" left="3480" top="6600" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="5415" top="8085" width="9000" height="6000">
@@ -496,7 +496,7 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE id="437" systemname="TiltCorrection" filename="%VVVV%\contributions\ParticleSelfCollide\TiltCorrection.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\TiltCorrection.v4p" componentmode="InAWindow">
+   <NODE id="437" systemname="TiltCorrection" filename="%VVVV%\contributions\ParticleSelfCollide\TiltCorrection.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\TiltCorrection.v4p" componentmode="Hidden">
    <BOUNDS type="Node" left="10530" top="6885" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
@@ -627,8 +627,6 @@
    <LINK srcnodeid="449" srcpinname="Y Output Value" dstnodeid="435" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="447" srcpinname="tween" dstnodeid="488" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="447" srcpinname="tween" dstnodeid="478" dstpinname="lightTween">
    </LINK>
    <LINK srcnodeid="448" srcpinname="Output" dstnodeid="449" dstpinname="Y Input Value">
    </LINK>
