@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="5415" scrolly="1710">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="3870" scrolly="7845">
    <BOUNDS height="10830" left="480" top="2595" type="Window" width="15030">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
@@ -615,6 +615,8 @@
    </PIN>
    <PIN pinname="subtractBack" slicecount="1" values="0.37">
    </PIN>
+   <PIN pinname="platePosXYZ" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="278" srcpinname="Output" dstnodeid="462" dstpinname="radius" hiddenwhenlocked="1">
    </LINK>
@@ -652,6 +654,8 @@
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="platePosXYZ" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="290" srcpinname="Geometry Out" dstnodeid="511" dstpinname="Geometry">
@@ -1315,5 +1319,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="596" srcpinname="Y Output Value" dstnodeid="461" dstpinname="humanPosXYZ">
+   </LINK>
+   <LINK srcnodeid="566" srcpinname="Y Output Value" dstnodeid="462" dstpinname="platePosXYZ">
+   </LINK>
+   <LINK srcnodeid="566" srcpinname="Y Output Value" dstnodeid="511" dstpinname="platePosXYZ">
    </LINK>
    </PATCH>

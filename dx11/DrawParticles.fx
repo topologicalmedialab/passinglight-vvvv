@@ -20,7 +20,9 @@ struct particle
 StructuredBuffer<particle> ppos;
 
 float radius = 0.05f;
- 
+
+float3 platePos;
+
     float3 g_positions[4]:IMMUTABLE =
     {
         float3( -1, 1, 0 ),
@@ -67,6 +69,10 @@ vs2ps VS(VS_IN input)
 	
 	// nasty hack to disable bug particles in the middle
 	if(p.x == 0 && p.y == 0) Out.PosWVP.xy = float2(100,100);
+	float3 plateVel = platePos - p;
+	plateVel *= float3(1, 9.0/16.0, 0);
+	if(ppos[input.iv].age.y > 60 && (abs(plateVel.x) < 0.27 && abs(plateVel.y) < 0.25))
+		Out.PosWVP.xy = float2(100,100);
 	//if(ppos[input.iv].age.x >= 1) Out.PosWVP.xy = float2(100,100);
 
 	return Out;

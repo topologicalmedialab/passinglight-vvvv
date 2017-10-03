@@ -113,8 +113,10 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
         }
 		float3 fieldsAdd = float3(d_1n * float2(force * 1.0f,force * 1.0f),0);
 		
+		//Output[DTid.x].age.y = 0; // flag to indicate it's on the floor
 		// drain
 		if(isOnFloor) {
+			Output[DTid.x].age.y += 1; // flag to indicate it's on the floor
 			float3 drainVel = drainPos - Output[DTid.x].pos;
 			float3 humanVel = humanPos - Output[DTid.x].pos;
 			float drainLen = length(drainVel);
@@ -141,6 +143,9 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 				plateVel.y *= 0.5;
 				fieldsAdd += plateVel;
 			}
+		}
+		else {
+			Output[DTid.x].age.y -= 1;
 		}
 		Output[DTid.x].vel *= damp;
     	Output[DTid.x].vel += fieldsAdd * float3(1, 16.0/9.0, 0);
