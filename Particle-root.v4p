@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="17220" scrolly="13380">
-   <BOUNDS type="Window" left="5820" top="2595" width="12150" height="10545">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="14265" scrolly="20370">
+   <BOUNDS type="Window" left="6180" top="1800" width="12150" height="10545">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -452,7 +452,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE id="447" systemname="TweenManager" filename="%VVVV%\contributions\ParticleSelfCollide\TweenManager.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\TweenManager.v4p" componentmode="Hidden">
+   <NODE id="447" systemname="TweenManager" filename="%VVVV%\contributions\ParticleSelfCollide\TweenManager.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\TweenManager.v4p" componentmode="InAWindow">
    <BOUNDS type="Node" left="5130" top="5970" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
@@ -462,6 +462,8 @@
    <BOUNDS type="Window" left="3930" top="2910" width="11145" height="8790">
    </BOUNDS>
    <PIN pinname="tween" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
    <NODE id="445" systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden">
@@ -1923,7 +1925,7 @@
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="Line (DX11).v4p" id="675" nodename="Line (DX11)" systemname="Line (DX11)">
@@ -1941,7 +1943,7 @@
    </PIN>
    <PIN pinname="Single Input" visible="1">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="10">
+   <PIN pinname="Width" slicecount="1" values="13">
    </PIN>
    <PIN pinname="BinSize">
    </PIN>
@@ -1950,6 +1952,10 @@
    <PIN pinname="Pattern" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="PatternScale" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Transform Each Bin" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="675" dstpinname="Single Input" srcnodeid="681" srcpinname="Y Output Value">
@@ -2123,7 +2129,7 @@
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="0.08">
+   <PIN pinname="Width" slicecount="1" values="0.14">
    </PIN>
    </NODE>
    <LINK srcnodeid="693" srcpinname="Texture Out" dstnodeid="595" dstpinname="Texture In">
@@ -2245,7 +2251,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Switch" slicecount="1" values="1">
+   <PIN pinname="Switch" slicecount="1" values="1" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="685" srcpinname="XYZ" dstnodeid="698" dstpinname="Input 1">
@@ -2255,18 +2261,6 @@
    <LINK srcnodeid="696" srcpinname="XYZ" dstnodeid="698" dstpinname="Input 3">
    </LINK>
    <LINK srcnodeid="698" srcpinname="Output" dstnodeid="686" dstpinname="Destination Maximum">
-   </LINK>
-   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="699">
-   <BOUNDS type="Node" left="18030" top="20070" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Go To Position" visible="1">
-   </PIN>
-   <PIN pinname="Position Out" visible="1">
-   </PIN>
-   <PIN pinname="FilterTime" slicecount="1" values="0.5">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="447" srcpinname="tween" dstnodeid="699" dstpinname="Go To Position">
    </LINK>
    <NODE systemname="Renderer (DX11 MRT)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 MRT)" componentmode="Hidden" id="700">
    <BOUNDS type="Node" left="16620" top="24780" width="100" height="100">
@@ -2289,5 +2283,7 @@
    <LINK srcnodeid="700" srcpinname="Buffers" dstnodeid="693" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="447" srcpinname="tween" dstnodeid="687" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="447" srcpinname="Y" dstnodeid="698" dstpinname="Switch">
    </LINK>
    </PATCH>
