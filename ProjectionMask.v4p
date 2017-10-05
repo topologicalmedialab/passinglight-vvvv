@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
    <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ProjectionMask.v4p" scrollx="0" scrolly="-360" systemname="ProjectionMask" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ProjectionMask.v4p">
-   <BOUNDS type="Window" left="555" top="3180" width="12075" height="10305">
+   <BOUNDS type="Window" left="2460" top="2430" width="12075" height="10305">
    </BOUNDS>
    <NODE id="13" systemname="Levels (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Levels.tfx" nodename="Levels (DX11.TextureFX)" componentmode="Hidden">
    <BOUNDS type="Node" left="5355" top="8370" width="100" height="100">
@@ -79,7 +79,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4875" top="3165" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2.13">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -257,9 +257,9 @@
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" values="1.346129302986,1.38826812632667,-1.3076923076923,-1.2979444704435">
+   <PIN pinname="Y Input Value" slicecount="4" values="1.4486934055501,1.38826812632667,-1.61538461538461,-1.6056367781358">
    </PIN>
-   <PIN pinname="X Input Value" pintype="Input" slicecount="4" visible="0" values="-1.1223585134807,0.940854991498658,1.09278600923001,-1.37672814332811">
+   <PIN pinname="X Input Value" pintype="Input" slicecount="4" visible="0" values="-1.15587806655334,0.873815885353407,1.15982511537525,-1.41024769640073">
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
    </PIN>
