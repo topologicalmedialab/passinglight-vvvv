@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="270" scrolly="2040">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="3900" scrolly="2760">
    <BOUNDS height="10830" left="1065" top="1305" type="Window" width="15030">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
@@ -1323,17 +1323,5 @@
    <LINK srcnodeid="566" srcpinname="Y Output Value" dstnodeid="462" dstpinname="platePosXYZ">
    </LINK>
    <LINK srcnodeid="566" srcpinname="Y Output Value" dstnodeid="511" dstpinname="platePosXYZ">
-   </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="597">
-   <BOUNDS type="Node" left="16410" top="8670" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="16410" top="8670" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="11325" top="9675" width="6240" height="5085">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="522" srcpinname="Output Node" dstnodeid="597" dstpinname="Texture In">
    </LINK>
    </PATCH>
