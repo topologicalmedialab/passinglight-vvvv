@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="7185" scrolly="19275">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="2100" scrolly="21870">
    <BOUNDS type="Window" left="3810" top="1020" width="17700" height="13350">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -9,7 +9,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="11895" top="30975" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="21015" top="1425" width="6240" height="5085">
+   <BOUNDS type="Window" left="22125" top="3495" width="6240" height="5085">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -693,7 +693,7 @@
    <NODE id="425" systemname="ParticleSelfColision2D" filename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" componentmode="InAWindow">
    <BOUNDS type="Node" left="6630" top="11820" width="3060" height="270">
    </BOUNDS>
-   <BOUNDS type="Window" left="1065" top="1305" width="15030" height="10830">
+   <BOUNDS type="Window" left="2640" top="1365" width="15030" height="10830">
    </BOUNDS>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1151,9 +1151,9 @@
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" values="1.61237785016287,1.55374592833876,-0.0097719869706805,0.30293159609121">
+   <PIN pinname="Y Input Value" slicecount="4" values="1.61237785016287,1.55374592833876,-0.0097719869706805,0.283387622149842">
    </PIN>
-   <PIN pinname="X Input Value" pintype="Input" slicecount="4" visible="0" values="-0.553846153846153,0.0307692307692264,0.0461538461538424,-0.584615384615382">
+   <PIN pinname="X Input Value" pintype="Input" slicecount="4" visible="0" values="-0.569230769230769,0.0461538461538418,0.0461538461538424,-0.615384615384613">
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
    </PIN>
@@ -1197,7 +1197,7 @@
    </PIN>
    <PIN pinname="Destination Minimum" visible="1" slicecount="8" values="-0.619565217391319,1.56410256410256,0.102866164683016,1.58120222805556,0.120718970123865,0.179487179487187,-0.653651220251187,0.167853575159106">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1217,9 +1217,9 @@
    </PIN>
    <PIN pinname="Maximum" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="687" srcpinname="Y Output Value" dstnodeid="686" dstpinname="Input">
-   </LINK>
    <NODE id="679" systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="XYZ" visible="1" pintype="Output">
    </PIN>
@@ -1269,9 +1269,9 @@
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" values="1.39739413680782,1.41693811074918,0.322475570032577,0.322475570032578">
+   <PIN pinname="Y Input Value" slicecount="4" values="1.39739413680782,1.41693811074918,0.322475570032577,0.283387622149842">
    </PIN>
-   <PIN pinname="X Input Value" pintype="Input" slicecount="4" visible="0" values="-0.676923076923076,0.123076923076919,0.107692307692304,-0.584615384615382">
+   <PIN pinname="X Input Value" pintype="Input" slicecount="4" visible="0" values="-0.676923076923076,0.123076923076919,0.107692307692304,-0.599999999999997">
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
    </PIN>
@@ -1321,9 +1321,9 @@
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" values="1.5342019543974,1.61237785016286,0.302931596091209,-0.00977198697067937">
+   <PIN pinname="Y Input Value" slicecount="4" values="1.5342019543974,1.57328990228012,0.302931596091209,0.0293159609120567">
    </PIN>
-   <PIN pinname="X Input Value" pintype="Input" slicecount="4" visible="0" values="-0.599999999999999,0.0923076923076882,0.0923076923076886,-0.646153846153844">
+   <PIN pinname="X Input Value" pintype="Input" slicecount="4" visible="0" values="-0.584615384615384,0.0923076923076882,0.0769230769230732,-0.646153846153845">
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
    </PIN>
@@ -1373,7 +1373,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Switch" slicecount="1" visible="1" values="1">
+   <PIN pinname="Switch" slicecount="1" visible="1" values="2">
    </PIN>
    </NODE>
    <LINK srcnodeid="685" srcpinname="XYZ" dstnodeid="698" dstpinname="Input 1">
@@ -1405,8 +1405,6 @@
    <LINK srcnodeid="700" srcpinname="Buffers" dstnodeid="693" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="447" srcpinname="tween" dstnodeid="687" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="447" srcpinname="Y" dstnodeid="698" dstpinname="Switch">
    </LINK>
    <NODE systemname="ProjectionMask" filename="%VVVV%\contributions\ParticleSelfCollide\ProjectionMask.v4p" nodename="%VVVV%\contributions\ParticleSelfCollide\ProjectionMask.v4p" componentmode="InAWindow" id="701">
    <BOUNDS type="Node" left="11910" top="28920" width="100" height="100">
@@ -1507,7 +1505,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-0.03">
+   <PIN pinname="TranslateY" slicecount="1" values="-0.02">
    </PIN>
    </NODE>
    <LINK srcnodeid="710" srcpinname="Transform Out" dstnodeid="709" dstpinname="Transform">
@@ -1531,8 +1529,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="711" srcpinname="Y Output Value" dstnodeid="700" dstpinname="Texture SizeXY">
-   </LINK>
-   <LINK srcnodeid="595" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
    </LINK>
    <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="713">
    <BOUNDS type="Node" left="15465" top="27675" width="100" height="100">
@@ -1593,9 +1589,47 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-0.01">
+   <PIN pinname="TranslateY" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="719" srcpinname="Transform Out" dstnodeid="675" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="720">
+   <BOUNDS type="Box" left="13245" top="18660" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13245" top="18660" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="447" srcpinname="Y" dstnodeid="720" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="721">
+   <BOUNDS type="Box" left="14640" top="20760" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14640" top="20760" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="721" srcpinname="Y Output Value" dstnodeid="698" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="720" srcpinname="Y Output Value" dstnodeid="721" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="687" srcpinname="Y Output Value" dstnodeid="686" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="595" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
    </LINK>
    </PATCH>
