@@ -219,7 +219,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4275" top="3645" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.18,0.1,0.1">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.45,0.4,0.38">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -357,7 +357,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6195" top="2220" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="6" visible="1" values="0.52,-0.49,0.21,-0.53,0,-0.53">
+   <PIN pinname="Y Input Value" slicecount="6" visible="1" values="0.52,-0.49,0.38,-0.53,0.26,-0.53">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -419,5 +419,17 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="101" srcpinname="Y Output Value" dstnodeid="77" dstpinname="XY">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="105">
+   <BOUNDS type="Node" left="1605" top="2265" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1605" top="2265" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4800" top="5745" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output Node" dstnodeid="105" dstpinname="Texture In">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="2100" scrolly="21870">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="9240" scrolly="13200">
    <BOUNDS type="Window" left="3810" top="1020" width="17700" height="13350">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -1628,8 +1628,20 @@
    </LINK>
    <LINK srcnodeid="720" srcpinname="Y Output Value" dstnodeid="721" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="687" srcpinname="Y Output Value" dstnodeid="686" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="595" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="722">
+   <BOUNDS type="Node" left="12930" top="22635" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="0.75">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="687" srcpinname="Y Output Value" dstnodeid="722" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="722" srcpinname="Output" dstnodeid="686" dstpinname="Input">
    </LINK>
    </PATCH>
