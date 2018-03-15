@@ -1665,6 +1665,8 @@
    </PIN>
    <PIN pinname="Position Out" visible="1">
    </PIN>
+   <PIN pinname="Output party" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Renderer (DX11 MRT)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 MRT)" componentmode="Hidden" id="726">
    <BOUNDS type="Node" left="14265" top="27165" width="100" height="100">
@@ -1810,8 +1812,6 @@
    </NODE>
    <LINK srcnodeid="728" srcpinname="Texture Out" dstnodeid="737" dstpinname="Texture In">
    </LINK>
-   <LINK srcnodeid="737" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
-   </LINK>
    <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="739">
    <BOUNDS type="Node" left="8625" top="29655" width="100" height="100">
    </BOUNDS>
@@ -1851,5 +1851,139 @@
    <LINK srcnodeid="740" srcpinname="Texture Out" dstnodeid="737" dstpinname="Texture In 2">
    </LINK>
    <LINK srcnodeid="724" srcpinname="Position Out" dstnodeid="737" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Colorize (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Colorize.tfx" nodename="Colorize (DX11.TextureFX)" componentmode="Hidden" id="742">
+   <BOUNDS type="Node" left="10740" top="31680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="ColorA" slicecount="1" values="|0.06452,0.06452,0.06452,0.00000|">
+   </PIN>
+   <PIN pinname="ColorB" slicecount="1" values="|0.06451,0.06451,0.06451,0.00000|">
+   </PIN>
+   <PIN pinname="ColorC" slicecount="1" visible="1" values="|0.23734,0.41486,0.21592,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="737" srcpinname="Texture Out" dstnodeid="742" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="742" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="743">
+   <BOUNDS type="Node" left="12285" top="29745" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Hue" slicecount="1" visible="1" values="0.1">
+   </PIN>
+   <PIN pinname="Lightness" slicecount="1" values="0.57">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Color Input)" nodename="Switch (Color Input)" componentmode="Hidden" id="744">
+   <BOUNDS type="Node" left="12060" top="30120" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="743" srcpinname="Output" dstnodeid="744" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="743" srcpinname="Output" dstnodeid="744" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="724" srcpinname="Output party" dstnodeid="744" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="745">
+   <BOUNDS type="Node" left="13470" top="29865" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="745" srcpinname="Output" dstnodeid="743" dstpinname="Hue">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="747">
+   <BOUNDS type="Node" left="12000" top="30990" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1" slicecount="1" values="0.315387882615323">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="748">
+   <BOUNDS type="Node" left="12720" top="31005" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1" slicecount="1" values="0.315387882615323">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="749">
+   <BOUNDS type="Node" left="13455" top="31005" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1" slicecount="1" values="0.315387882615323">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="RGB (Color Split)" nodename="RGB (Color Split)" componentmode="Hidden" id="746">
+   <BOUNDS type="Node" left="12060" top="30540" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Hue" visible="1">
+   </PIN>
+   <PIN pinname="Blue" visible="1">
+   </PIN>
+   <PIN pinname="Green" visible="1">
+   </PIN>
+   <PIN pinname="Red" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="744" srcpinname="Output" dstnodeid="746" dstpinname="Input">
+   </LINK>
+   <NODE systemname="RGB (Color Join)" nodename="RGB (Color Join)" componentmode="Hidden" id="750">
+   <BOUNDS type="Node" left="12075" top="31365" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Hue" visible="1">
+   </PIN>
+   <PIN pinname="Saturation" visible="1">
+   </PIN>
+   <PIN pinname="Lightness" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Green" visible="1">
+   </PIN>
+   <PIN pinname="Red" visible="1">
+   </PIN>
+   <PIN pinname="Blue" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="747" srcpinname="Position Out" dstnodeid="750" dstpinname="Hue">
+   </LINK>
+   <LINK srcnodeid="748" srcpinname="Position Out" dstnodeid="750" dstpinname="Saturation">
+   </LINK>
+   <LINK srcnodeid="749" srcpinname="Position Out" dstnodeid="750" dstpinname="Lightness">
+   </LINK>
+   <LINK srcnodeid="750" srcpinname="Output" dstnodeid="742" dstpinname="ColorC">
+   </LINK>
+   <LINK srcnodeid="748" srcpinname="Position Out" dstnodeid="750" dstpinname="Green">
+   </LINK>
+   <LINK srcnodeid="747" srcpinname="Position Out" dstnodeid="750" dstpinname="Red">
+   </LINK>
+   <LINK srcnodeid="749" srcpinname="Position Out" dstnodeid="750" dstpinname="Blue">
+   </LINK>
+   <LINK srcnodeid="746" srcpinname="Blue" dstnodeid="749" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="746" srcpinname="Green" dstnodeid="748" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="746" srcpinname="Red" dstnodeid="747" dstpinname="Go To Position">
    </LINK>
    </PATCH>
