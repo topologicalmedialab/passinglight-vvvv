@@ -200,34 +200,10 @@
    </NODE>
    <LINK srcnodeid="63" srcpinname="Arguments" dstnodeid="68" dstpinname="Input">
    </LINK>
-   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="69">
-   <BOUNDS type="Node" left="8280" top="5565" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="off">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="68" srcpinname="Output" dstnodeid="69" dstpinname="Input 1">
-   </LINK>
-   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="70">
-   <BOUNDS type="Node" left="8100" top="5985" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="69" srcpinname="Output" dstnodeid="70" dstpinname="Input 2">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="71">
-   <BOUNDS type="Box" left="8115" top="6615" width="795" height="240">
+   <BOUNDS type="Box" left="6375" top="6840" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8115" top="6615" width="0" height="0">
+   <BOUNDS type="Node" left="6375" top="6840" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -235,9 +211,109 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="71" dstpinname="Y Input Value">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
+   <NODE systemname="Damper (Animation)" filename="" nodename="Damper (Animation)" componentmode="Hidden" id="72">
+   <BOUNDS type="Node" left="6555" top="6315" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Go To Position" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="72" srcpinname="Position Out" dstnodeid="71" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="75">
+   <BOUNDS type="Box" left="8325" top="6855" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8325" top="6855" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Position Out|">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Damper (Animation)" filename="" nodename="Damper (Animation)" componentmode="Hidden" id="74">
+   <BOUNDS type="Node" left="8325" top="6240" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Go To Position" slicecount="1" visible="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="74" srcpinname="Position Out" dstnodeid="75" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Case (Value)" nodename="Case (Value)" componentmode="Hidden" id="80" filename="%VVVV%\addonpack\lib\nodes\plugins\CaseValue.dll">
+   <BOUNDS type="Node" left="6525" top="5625" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="off">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="everything">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="1" values="fluid">
+   </PIN>
+   <PIN pinname="Input 4" slicecount="1" values="shadow">
+   </PIN>
+   <PIN pinname="Input 5" slicecount="1" values="party">
+   </PIN>
+   <PIN pinname="Cases" slicecount="1" values="|off, everything, fluid, shadow, party|">
+   </PIN>
+   <PIN pinname="everything" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="fluid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="party" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Value Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Case (Value)" nodename="Case (Value)" componentmode="Hidden" id="81" filename="%VVVV%\addonpack\lib\nodes\plugins\CaseValue.dll">
+   <BOUNDS type="Node" left="8265" top="5580" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="off">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="everything">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="1" values="fluid">
+   </PIN>
+   <PIN pinname="Input 4" slicecount="1" values="shadow">
+   </PIN>
+   <PIN pinname="Input 5" slicecount="1" values="party">
+   </PIN>
+   <PIN pinname="Cases" slicecount="1" values="|off, everything, fluid, shadow, party|">
+   </PIN>
+   <PIN pinname="everything" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="fluid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="party" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="shadow" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Value Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="68" srcpinname="Output" dstnodeid="80" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Output" dstnodeid="81" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Value Output" dstnodeid="72" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="81" srcpinname="Value Output" dstnodeid="74" dstpinname="Go To Position">
+   </LINK>
    </PATCH>
