@@ -197,6 +197,8 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Default" slicecount="1" values="fluid">
+   </PIN>
    </NODE>
    <LINK srcnodeid="63" srcpinname="Arguments" dstnodeid="68" dstpinname="Input">
    </LINK>
