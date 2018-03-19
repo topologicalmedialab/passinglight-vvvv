@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="3150" scrolly="3105">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" systemname="Particle-root" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\Particle-root.v4p" scrollx="5010" scrolly="24840">
    <BOUNDS type="Window" left="4845" top="600" width="14190" height="13350">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -2022,7 +2022,7 @@
    <PIN pinname="Texture SizeXY" slicecount="2" visible="1" values="240,180">
    </PIN>
    </NODE>
-   <NODE id="771" componentmode="Hidden" systemname="Renderer (EX9)" nodename="Renderer (EX9)">
+   <NODE id="771" componentmode="InAWindow" systemname="Renderer (EX9)" nodename="Renderer (EX9)">
    <BOUNDS type="Node" left="10530" top="3090" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="10530" top="3090" width="2400" height="1800">
@@ -2067,8 +2067,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="768" srcpinname="Y Output Value" dstnodeid="773" dstpinname="Texture SizeXY">
-   </LINK>
-   <LINK srcnodeid="773" srcpinname="Buffers" dstnodeid="426" dstpinname="Texture In">
    </LINK>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="775">
    <BOUNDS type="Node" left="10965" top="2670" width="100" height="100">
@@ -2162,8 +2160,6 @@
    </LINK>
    <LINK srcnodeid="769" srcpinname="Layer" dstnodeid="773" dstpinname="Layer">
    </LINK>
-   <LINK srcnodeid="742" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
-   </LINK>
    <LINK srcnodeid="772" srcpinname="Layer" dstnodeid="775" dstpinname="Layer 1">
    </LINK>
    <LINK srcnodeid="776" srcpinname="Layer" dstnodeid="775" dstpinname="Layer 2">
@@ -2193,5 +2189,41 @@
    <LINK srcnodeid="443" srcpinname="Y Output Value" dstnodeid="779" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="556" srcpinname="Output" dstnodeid="779" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="595" srcpinname="Texture Out" dstnodeid="483" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="786">
+   <BOUNDS type="Node" left="12435" top="5850" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="12435" top="5850" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-315" top="7740" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="426" srcpinname="Texture Out" dstnodeid="786" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="NiLevels (DX11.TextureFX)" filename="%VVVV%\contributions\ParticleSelfCollide\texture11\NiLevels.tfx" nodename="NiLevels (DX11.TextureFX)" componentmode="Hidden" id="787">
+   <BOUNDS type="Node" left="14700" top="5010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Output Black" slicecount="1" values="|1.00000,1.00000,1.00000,0.00000|">
+   </PIN>
+   <PIN pinname="Output White" slicecount="1" values="|0.17009,0.17009,0.17009,1.00000|">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="Levels">
+   </PIN>
+   <PIN pinname="Input Black" slicecount="1" values="|0.25611,0.25611,0.25611,0.00000|">
+   </PIN>
+   <PIN pinname="Input White" slicecount="1" values="|0.29423,0.29423,0.29423,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="773" srcpinname="Buffers" dstnodeid="787" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="787" srcpinname="Texture Out" dstnodeid="426" dstpinname="Texture In">
    </LINK>
    </PATCH>
