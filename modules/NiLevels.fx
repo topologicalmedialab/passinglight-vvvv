@@ -9,10 +9,10 @@ texture tex0;
 sampler s0=sampler_state{Texture=(tex0);MipFilter=LINEAR;MinFilter=LINEAR;MagFilter=LINEAR;};
 float4 p0(float2 vp:vpos):color{float2 x=(vp+.5)/R;
     float4 c=tex2D(s0,x);
+	if(dot(c.rgb, float3(1,1,1)) < 0.1) return float4(0,0,0,0);
 	c=((c-fromBlack)/(fromWhite-fromBlack));
     c=sign(c)*pow(abs(c),Gamma);
 	//if(ClampColor)c=saturate(c);
-	if(dot(c.rgb, float3(1,1,1) == 0)) return c;
 	
 	c=c*(toWhite-toBlack)+toBlack;
     return c;
