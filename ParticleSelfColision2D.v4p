@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="3900" scrolly="2760">
-   <BOUNDS height="10830" left="1065" top="1305" type="Window" width="15030">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="0" scrolly="495">
+   <BOUNDS height="10830" left="4350" top="450" type="Window" width="15030">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="7185" top="9150" width="100" height="100">
@@ -549,7 +549,7 @@
    </PIN>
    <PIN pinname="Depth Texture" visible="1">
    </PIN>
-   <PIN pinname="floorThreshold" slicecount="1" values="0.68">
+   <PIN pinname="floorThreshold" slicecount="1" values="0.68" visible="1">
    </PIN>
    <PIN pinname="drainPosXYZ" slicecount="3" visible="1" values="0,0,0">
    </PIN>
@@ -1324,4 +1324,34 @@
    </LINK>
    <LINK srcnodeid="566" srcpinname="Y Output Value" dstnodeid="511" dstpinname="platePosXYZ">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="597">
+   <BOUNDS type="Box" left="8100" top="6210" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8100" top="6210" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.68">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="598">
+   <BOUNDS type="Box" left="7890" top="6675" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7890" top="6675" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.68">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="598" srcpinname="Y Output Value" dstnodeid="461" dstpinname="floorThreshold">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
    </PATCH>
