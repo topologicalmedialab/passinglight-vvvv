@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
    <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\SimpleTracker.v4p" systemname="SimpleTracker" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\SimpleTracker.v4p" scrollx="630" scrolly="0">
-   <BOUNDS type="Window" left="11310" top="225" width="9000" height="13680">
+   <BOUNDS type="Window" left="8310" top="615" width="9000" height="13680">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -357,7 +357,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6195" top="2220" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="6" visible="1" values="0.52,-0.44,0.38,-0.45,0.26,-0.46">
+   <PIN pinname="Y Input Value" slicecount="6" visible="1" values="0.52,-0.86,0.38,-0.86,0.26,-0.86">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -420,7 +420,7 @@
    </NODE>
    <LINK srcnodeid="101" srcpinname="Y Output Value" dstnodeid="77" dstpinname="XY">
    </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="105">
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden" id="105">
    <BOUNDS type="Node" left="1605" top="2265" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="1605" top="2265" width="6000" height="4500">
