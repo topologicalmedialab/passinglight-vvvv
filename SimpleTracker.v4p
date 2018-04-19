@@ -353,11 +353,11 @@
    <LINK srcnodeid="99" srcpinname="PositionXY" dstnodeid="100" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="101">
-   <BOUNDS type="Box" left="6195" top="2220" width="1395" height="735">
+   <BOUNDS type="Box" left="6195" top="2205" width="1395" height="735">
    </BOUNDS>
-   <BOUNDS type="Node" left="6195" top="2220" width="0" height="0">
+   <BOUNDS type="Node" left="6195" top="2205" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="6" visible="1" values="0.52,-0.86,0.38,-0.86,0.26,-0.86">
+   <PIN pinname="Y Input Value" slicecount="6" visible="1" values="0.52,-0.4,0.38,-0.4,0.26,-0.4">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

@@ -135,7 +135,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID )
 				float3 drainVel = drainPos - Output[DTid.x].pos;
 				float drainLen = length(drainVel);
 				drainVel /= drainLen;
-				drainVel *= 0.00005f;
+				drainVel *= 0.0001f;
 				//drainVel.y *= 0.5;
 				fieldsAdd += drainVel;
 				Output[DTid.x].age.x += 0.00001;

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\HouseManager.v4p" systemname="TweenManager" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\TweenManager.v4p">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\HouseManager.v4p" systemname="TweenManager" filename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\TweenManager.v4p" scrollx="0" scrolly="1440">
    <BOUNDS type="Window" left="0" top="1545" width="11145" height="8790">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -197,7 +197,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="everything">
+   <PIN pinname="Default" slicecount="1" values="everything" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="63" srcpinname="Arguments" dstnodeid="68" dstpinname="Input">
@@ -347,5 +347,37 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="82" srcpinname="Output" dstnodeid="83" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="84">
+   <BOUNDS type="Box" left="8100" top="4905" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8100" top="4905" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="everything">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="85">
+   <BOUNDS type="Box" left="8070" top="4710" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8070" top="4710" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="fluid">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="84" srcpinname="Output String" dstnodeid="68" dstpinname="Default">
    </LINK>
    </PATCH>

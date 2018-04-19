@@ -239,7 +239,7 @@
    </BOUNDS>
    <PIN pinname="Bang" visible="1">
    </PIN>
-   <PIN pinname="Simulate" slicecount="1" values="0" visible="1">
+   <PIN pinname="Simulate" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Bang" dstnodeid="11" dstpinname="Apply">
@@ -299,15 +299,13 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4155" top="3540" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Layer 2" visible="1">
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer 1" visible="1">
    </PIN>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="15" srcpinname="Layer" dstnodeid="17" dstpinname="Layer 2">
-   </LINK>
    <LINK srcnodeid="12" srcpinname="Layer" dstnodeid="17" dstpinname="Layer 1">
    </LINK>
    <LINK srcnodeid="17" srcpinname="Layer Out" dstnodeid="6" dstpinname="Layer">
