@@ -1,0 +1,60 @@
+//@author: vux
+//@help: template for texture fx
+//@tags: texture
+//@credits: 
+
+Texture2D VTex : PREVIOUS;
+Texture2D  PTex <string uiname="pressure";>;
+Texture2D  MTex <string uiname="mask";>;
+SamplerState g_samLinear : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_POINT;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+};
+
+float vFlowDims;
+float GradMul;
+float4 PS(psInput input) : SV_Target
+{
+	//float4 c = texture2d.Sample(linearSampler,input.uv);
+float pL = PTex.Sample(g_samLinear, float2(input.uv.x - 1./vFlowDims, input.uv.y)).x; 
+  	float pR = PTex.Sample(g_samLinear, float2(input.uv.x + 1./vFlowDims, input.uv.y)).x; 
+  	float pB = PTex.Sample(g_samLinear, float2(input.uv.x, input.uv.y - 1./vFlowDims)).x; 
+  	float pT = PTex.Sample(g_samLinear, float2(input.uv.x, input.uv.y + 1./vFlowDims)).x; 
+
+  	float2 grad = float2(pR - pL, pT - pB) * GradMul;
+
+  	float4 v = VTex.Sample(g_samLinear, input.uv.xy);
+  	v.xy -= grad;
+	
+	if(MTex.Sample(g_samLinear, input.uv.xy).r > 0.5) {
+		v *= 0.1;
+	}
+	else {
+		//v.x += 0.01;
+		float2 rep = input.uv.xy - float2(0.5, 0.2);
+		rep *= 1.0 / (dot(rep, rep) + 0.0001);
+
+		float2 att = input.uv.xy - float2(0.15, 0.35);
+		att *= 1.0 / (dot(att, att) + 0.0001);
+		v.xy = v.xy * 0.9 - rep * 0.05 + att * 0.1;
+	}
+  	return v;
+}
+
+technique10 Process
+{
+	pass P0{SetPixelShader(CompileShader(ps_4_0,PS()));}
+
+	
+}
+
+
+
