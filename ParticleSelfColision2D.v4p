@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="1485" scrolly="5040">
-   <BOUNDS height="10830" left="-960" top="3210" type="Window" width="15030">
+   <PATCH nodename="C:\Users\User\Desktop\vvvv_50beta35.8_x86\contributions\ParticleSelfCollide\ParticleSelfColision2D.v4p" filename="C:\Users\david\Desktop\Particles Workshop\ParticleSystem_02 (pos vel)\ParticleSelfColision2D.v4p" systemname="ParticleSelfColision2D" scrollx="0" scrolly="7116">
+   <BOUNDS height="10830" left="4170" top="2490" type="Window" width="15030">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="268" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="7185" top="9150" width="100" height="100">
@@ -1327,7 +1327,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8100" top="6210" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.68">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.32">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1337,11 +1337,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="598">
-   <BOUNDS type="Box" left="8055" top="6600" width="795" height="240">
+   <BOUNDS type="Box" left="8400" top="6600" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8055" top="6600" width="0" height="0">
+   <BOUNDS type="Node" left="8400" top="6600" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.32">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.78">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
